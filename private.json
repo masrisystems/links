@@ -111,6 +111,14 @@
                     "active": true
                 },
                 {
+                    "name": "Agency Hub",
+                    "link": "hub.html",
+                    "class": "button-default",
+                    "logo": "images/icons/hub.svg",
+                    "aria_label": "Explore Services & Agency Hub",
+                    "active": true
+                },
+                {
                     "name": "Projects",
                     "link": "https://masrisystems.com/brain/projects/",
                     "class": "button-default",
