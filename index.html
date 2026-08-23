@@ -125,7 +125,12 @@
               loading="eager"
             />
           </a>
-          <h1 class="focus-in-expand">Masri Systems</h1>
+          <h1 class="focus-in-expand">
+            Masri Systems
+            <svg class="verified-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-label="Verified" role="img">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </h1>
           <p class="subtitle">Oldenburg &amp; Remote · Softwareentwicklung, AI &amp; Webdesign</p>
           <div class="contact-info">
             <a href="tel:+4917631579669" aria-label="Call Masri Systems">+49 (176) 31579669</a>
@@ -350,7 +355,12 @@
                 <a href="https://masrisystems.com/" target="_blank" rel="noopener" class="logo" aria-label="Visit ${profile.company.name} website">
                     <img src="${profile.company.logo_url}" alt="${profile.company.name} Logo" width="44" height="44" loading="eager">
                 </a>
-                <h1 class="focus-in-expand">${profile.company.name}</h1>
+                <h1 class="focus-in-expand">
+                  ${profile.company.name}
+                  <svg class="verified-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-label="Verified" role="img">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </h1>
                 <p class="subtitle">${profile.company.subtitle || "Oldenburg & Remote · Softwareentwicklung, AI & Webdesign"}</p>
                 <div class="contact-info">
                     <a href="tel:${profile.contact.phone_link}" aria-label="Call ${profile.company.name}">${profile.contact.phone_display}</a>
