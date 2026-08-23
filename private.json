@@ -1,9 +1,6 @@
 {
     "company": {
         "name": "Masri Systems",
-        "verified": true,
-        "tagline": "Rich in features, not in pricing.",
-        "location": "📍 Oldenburg & Remote · Softwareentwicklung, AI & Webdesign",
         "logo_url": "https://masri.uber.space/images/email/logo.svg",
         "background_url": "https://masri.uber.space/images/email/bg2.png"
     },
@@ -14,183 +11,150 @@
         "phone_link": "+4917631579669",
         "email": "hallo@masrisystems.com"
     },
-    "quick_socials": [
-        {
-            "name": "GitHub",
-            "link": "https://github.com/masrisystems",
-            "logo": "images/icons/github.svg",
-            "aria_label": "GitHub Profile"
-        },
-        {
-            "name": "LinkedIn",
-            "link": "https://www.linkedin.com/in/mohamad-masri-89778915a/",
-            "logo": "images/icons/linkedin.svg",
-            "aria_label": "LinkedIn Profile"
-        },
-        {
-            "name": "Instagram",
-            "link": "https://www.instagram.com/masrisystems/",
-            "logo": "images/icons/instagram.svg",
-            "aria_label": "Instagram Profile"
-        },
-        {
-            "name": "Facebook",
-            "link": "https://www.facebook.com/profile.php?id=61582289406696",
-            "logo": "images/icons/facebook.svg",
-            "aria_label": "Facebook Page"
-        },
-        {
-            "name": "WhatsApp",
-            "link": "https://wa.me/4917631579669",
-            "logo": "images/icons/whatsapp.svg",
-            "aria_label": "WhatsApp Contact"
-        }
-    ],
+    "legal": {
+        "tax_id_label": "USt-IDNr.",
+        "tax_id": "DE454025250",
+        "local_tax_number": "DE454025250",
+        "tax_note": "Gemäß § 19 UStG wird keine Umsatzsteuer berechnet."
+    },
+    "bank": {
+        "holder": "Mohamad Masri",
+        "name": "",
+        "iban": "",
+        "bic": ""
+    },
     "sections": [
         {
-            "label": "🚀 High-Impact Conversion",
+            "label": "Work with me",
             "buttons": [
                 {
-                    "name": "Book a Free 30-Min Discovery Call",
+                    "name": "GitHub Sponsors",
+                    "link": "https://github.com/sponsors/Masrisystems",
+                    "class": "button-github",
+                    "logo": "images/icons/github.svg",
+                    "aria_label": "Sponsor me on GitHub",
+                    "active": true
+                },
+                {
+                    "name": "Schedule a Call",
                     "link": "https://cal.com/masrisystems-f7j951/30min?duration=30",
                     "class": "button-cal",
                     "logo": "images/icons/cal.svg",
-                    "aria_label": "Book a Free 30-Minute Discovery Call",
+                    "aria_label": "Schedule a 30-minute call via Cal.com",
                     "active": true
                 },
                 {
-                    "name": "2-Minute Project Cost Estimator",
-                    "link": "https://masrisystems.com/pricing",
+                    "name": "Contact Form",
+                    "link": "https://masrisystems.com/contact",
                     "class": "button-default",
-                    "logo": "images/icons/generic-calendar.svg",
-                    "aria_label": "Instant Project Cost Estimator",
+                    "logo": "images/icons/email.svg",
+                    "aria_label": "Contact Form",
                     "active": true
                 },
                 {
-                    "name": "Official Website & Flagship",
+                    "name": "Upwork",
+                    "link": "https://www.upwork.com/freelancers/~0141405ef520d50588?mp_source=share",
+                    "class": "button-upwork",
+                    "logo": "images/icons/upwork.svg",
+                    "aria_label": "Hire me on Upwork",
+                    "active": false
+                }
+            ]
+        },
+        {
+            "label": "Explore",
+            "buttons": [
+                {
+                    "name": "Website",
                     "link": "https://masrisystems.com/",
                     "class": "button-default",
                     "logo": "images/icons/generic-website.svg",
-                    "aria_label": "Visit Masri Systems Official Website",
-                    "active": true
-                }
-            ]
-        },
-        {
-            "label": "📍 Local Presence & Verified Reviews",
-            "buttons": [
-                {
-                    "name": "Leave a Google Review (5.0 ★)",
-                    "link": "https://g.page/r/CQl3_s6R1DkiEAE/review",
-                    "class": "button-google",
-                    "logo": "images/icons/google.svg",
-                    "aria_label": "Leave a 5.0 Star Google Review",
+                    "aria_label": "Visit my website masrisystems.com",
                     "active": true
                 },
                 {
-                    "name": "Find Us on Google Maps",
-                    "link": "https://maps.google.com/?q=Masri+Systems+Nettelbeckstraße+26131+Oldenburg",
-                    "class": "button-google",
-                    "logo": "images/icons/generic-map.svg",
-                    "aria_label": "Find Masri Systems on Google Maps",
-                    "active": true
-                },
-                {
-                    "name": "Apple Maps Business Listing",
-                    "link": "https://maps.apple.com/?q=Masri%20Systems%20-%20Softwareentwicklung&near=53.1400587,8.188068399999999",
-                    "class": "button-apple",
-                    "logo": "images/icons/apple.svg",
-                    "aria_label": "View Masri Systems on Apple Maps",
-                    "active": true
-                },
-                {
-                    "name": "Bing Places / Maps Listing",
-                    "link": "https://www.bing.com/maps?q=Masri%20Systems%20-%20Softwareentwicklung&cp=53.1400587~8.188068399999999",
-                    "class": "button-microsoft",
-                    "logo": "images/icons/microsoft.svg",
-                    "aria_label": "View Masri Systems on Bing Maps",
-                    "active": true
-                }
-            ]
-        },
-        {
-            "label": "💻 Core Services & Solutions",
-            "buttons": [
-                {
-                    "name": "Custom Software & Web Apps (VILT Stack)",
-                    "link": "https://masrisystems.com/services/software-development",
+                    "name": "Projects & Showcase",
+                    "link": "https://masrisystems.com/brain/projects/",
                     "class": "button-default",
                     "logo": "images/icons/generic-code.svg",
-                    "aria_label": "Custom Software & Web Application Development",
+                    "aria_label": "Explore digital flagships and client projects",
                     "active": true
                 },
                 {
-                    "name": "High-Performance Webdesign (<0.8s LCP)",
-                    "link": "https://masrisystems.com/services/website-design",
-                    "class": "button-default",
-                    "logo": "images/icons/generic-homepage.svg",
-                    "aria_label": "Modern High-Performance Webdesign",
-                    "active": true
-                },
-                {
-                    "name": "AI Agents & Workflow Automation",
-                    "link": "https://masrisystems.com/automation",
-                    "class": "button-default",
-                    "logo": "images/icons/generic-computer.svg",
-                    "aria_label": "AI Agents and Workflow Automation",
-                    "active": true
-                },
-                {
-                    "name": "Headless E-Commerce & Online Stores",
-                    "link": "https://masrisystems.com/services/ecommerce-development",
-                    "class": "button-default",
-                    "logo": "images/icons/generic-shopping-bag.svg",
-                    "aria_label": "Headless E-Commerce & Online Shops",
-                    "active": true
-                },
-                {
-                    "name": "Mobile App Development (iOS & Android)",
-                    "link": "https://masrisystems.com/services/mobile-applications",
-                    "class": "button-default",
-                    "logo": "images/icons/generic-phone.svg",
-                    "aria_label": "Mobile App Development for iOS and Android",
-                    "active": true
-                }
-            ]
-        },
-        {
-            "label": "🧠 Authority & Engineering Footprint",
-            "buttons": [
-                {
-                    "name": "Tech Blog & Brain Vault",
-                    "link": "https://masrisystems.com/brain",
+                    "name": "Blog",
+                    "link": "https://masrisystems.com/blog",
                     "class": "button-default",
                     "logo": "images/icons/generic-blog.svg",
-                    "aria_label": "Tech Blog and Knowledge Brain",
+                    "aria_label": "Read my blog at masrisystems.com/blog",
                     "active": true
                 },
                 {
-                    "name": "Founder Resume & Portfolio",
+                    "name": "Resume",
                     "link": "https://resume.masrisystems.com/",
                     "class": "button-default",
                     "logo": "images/icons/generic-website.svg",
-                    "aria_label": "Founder Interactive Resume",
+                    "aria_label": "Visit my resume at resume.masrisystems.com",
                     "active": true
                 },
                 {
-                    "name": "Open Source GitHub Repositories",
-                    "link": "https://github.com/masrisystems",
-                    "class": "button-github",
-                    "logo": "images/icons/github.svg",
-                    "aria_label": "Open Source Repositories on GitHub",
-                    "active": true
-                },
-                {
-                    "name": "Omnivault AI Obsidian Template",
+                    "name": "Omnivault AI",
                     "link": "https://omnivault.masrisystems.com/",
                     "class": "button-obsidian",
                     "logo": "images/icons/obsidian.svg",
-                    "aria_label": "Omnivault AI Obsidian Template",
+                    "aria_label": "Explore Omnivault AI Obsidian Template",
+                    "active": true
+                }
+            ]
+        },
+        {
+            "label": "Connect",
+            "buttons": [
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com/masrisystems",
+                    "class": "button-github",
+                    "logo": "images/icons/github.svg",
+                    "aria_label": "View my GitHub profile",
+                    "active": true
+                },
+                {
+                    "name": "Instagram",
+                    "link": "https://www.instagram.com/masrisystems/",
+                    "class": "button-instagram",
+                    "logo": "images/icons/instagram.svg",
+                    "aria_label": "Follow me on Instagram",
+                    "active": true
+                },
+                {
+                    "name": "Facebook",
+                    "link": "https://www.facebook.com/profile.php?id=61582289406696",
+                    "class": "button-faceb",
+                    "logo": "images/icons/facebook.svg",
+                    "aria_label": "Connect on Facebook",
+                    "active": true
+                },
+                {
+                    "name": "LinkedIn",
+                    "link": "https://www.linkedin.com/in/mohamad-masri-89778915a/",
+                    "class": "button-linked",
+                    "logo": "images/icons/linkedin.svg",
+                    "aria_label": "Connect on LinkedIn",
+                    "active": true
+                },
+                {
+                    "name": "WhatsApp",
+                    "link": "https://wa.me/4917631579669",
+                    "class": "button-whatsapp",
+                    "logo": "images/icons/whatsapp.svg",
+                    "aria_label": "Message me on WhatsApp",
+                    "active": true
+                },
+                {
+                    "name": "Google Reviews",
+                    "link": "https://g.page/r/CQl3_s6R1DkiEAE/review",
+                    "class": "button-google",
+                    "logo": "images/icons/google.svg",
+                    "aria_label": "Leave a Google review",
                     "active": true
                 }
             ]
