@@ -69,7 +69,7 @@
                     "name": "GitHub Sponsors",
                     "link": "https://github.com/sponsors/Masrisystems",
                     "class": "button-github",
-                    "logo": "images/icons/github-sponsors.svg",
+                    "logo": "images/icons/heart-sponsor.svg",
                     "aria_label": "Sponsor me on GitHub",
                     "active": true
                 },
@@ -77,7 +77,7 @@
                     "name": "Schedule a Call",
                     "link": "https://cal.com/masrisystems-f7j951/30min?duration=30",
                     "class": "button-cal",
-                    "logo": "images/icons/cal.svg",
+                    "logo": "images/icons/calendar.svg",
                     "aria_label": "Schedule a 30-minute call via Cal.com",
                     "active": true
                 },
@@ -85,7 +85,7 @@
                     "name": "Contact Form",
                     "link": "https://masrisystems.com/contact",
                     "class": "button-default",
-                    "logo": "images/icons/generic-email.svg",
+                    "logo": "images/icons/contact.svg",
                     "aria_label": "Contact Form",
                     "active": true
                 },
@@ -106,15 +106,15 @@
                     "name": "Website",
                     "link": "https://masrisystems.com/",
                     "class": "button-default",
-                    "logo": "images/icons/generic-homepage.svg",
+                    "logo": "images/icons/globe.svg",
                     "aria_label": "Visit my website masrisystems.com",
                     "active": true
                 },
                 {
                     "name": "Projects & Showcase",
-                    "link": "https://masrisystems.com/brain/projects/main",
+                    "link": "https://masrisystems.com/brain/projects/",
                     "class": "button-default",
-                    "logo": "images/icons/generic-code.svg",
+                    "logo": "images/icons/projects.svg",
                     "aria_label": "Explore digital flagships and client projects",
                     "active": true
                 },
@@ -122,7 +122,7 @@
                     "name": "Blog",
                     "link": "https://masrisystems.com/blog",
                     "class": "button-default",
-                    "logo": "images/icons/generic-blog.svg",
+                    "logo": "images/icons/blog.svg",
                     "aria_label": "Read my blog at masrisystems.com/blog",
                     "active": true
                 },
@@ -138,7 +138,7 @@
                     "name": "Omnivault AI",
                     "link": "https://omnivault.masrisystems.com/",
                     "class": "button-obsidian",
-                    "logo": "images/icons/obsidian.svg",
+                    "logo": "images/icons/obsidian-clean.svg",
                     "aria_label": "Explore Omnivault AI Obsidian Template",
                     "active": true
                 }
