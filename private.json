@@ -69,7 +69,7 @@
                     "name": "GitHub Sponsors",
                     "link": "https://github.com/sponsors/Masrisystems",
                     "class": "button-github",
-                    "logo": "images/icons/github.svg",
+                    "logo": "images/icons/github-sponsors.svg",
                     "aria_label": "Sponsor me on GitHub",
                     "active": true
                 },
@@ -85,7 +85,7 @@
                     "name": "Contact Form",
                     "link": "https://masrisystems.com/contact",
                     "class": "button-default",
-                    "logo": "images/icons/email.svg",
+                    "logo": "images/icons/generic-email.svg",
                     "aria_label": "Contact Form",
                     "active": true
                 },
@@ -106,7 +106,7 @@
                     "name": "Website",
                     "link": "https://masrisystems.com/",
                     "class": "button-default",
-                    "logo": "images/icons/generic-website.svg",
+                    "logo": "images/icons/generic-homepage.svg",
                     "aria_label": "Visit my website masrisystems.com",
                     "active": true
                 },
@@ -130,7 +130,7 @@
                     "name": "Resume",
                     "link": "https://resume.masrisystems.com/",
                     "class": "button-default",
-                    "logo": "images/icons/generic-website.svg",
+                    "logo": "images/icons/resume.svg",
                     "aria_label": "Visit my resume at resume.masrisystems.com",
                     "active": true
                 },
