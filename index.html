@@ -78,29 +78,74 @@
       }
     </style>
 
-    <!-- Structured Data — Schema.org Person -->
+    <!-- Structured Data — Schema.org Organization & LocalBusiness -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Mohamad Masri",
-        "alternateName": "Masri Systems",
-        "url": "https://masrisystems.com",
-        "sameAs": [
-          "https://github.com/masrisystems",
-          "https://www.instagram.com/masrisystems/",
-          "https://www.facebook.com/profile.php?id=61582289406696",
-          "https://www.linkedin.com/in/mohamad-masri-89778915a/",
-          "https://masrisystems.com/blog"
-        ],
-        "jobTitle": "Software Developer",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Oldenburg",
-          "addressRegion": "Niedersachsen",
-          "addressCountry": "DE"
-        },
-        "knowsAbout": ["Web Development", "Laravel", "PHP", "JavaScript", "Software Engineering"]
+        "@graph": [
+          {
+            "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+            "@id": "https://masrisystems.com/#organization",
+            "name": "Masri Systems",
+            "alternateName": "Masri Systems - Softwareentwicklung",
+            "url": "https://masrisystems.com",
+            "logo": "https://masri.uber.space/images/email/logo.svg",
+            "image": "https://masri.uber.space/images/email/logo.svg",
+            "telephone": "+4917631579669",
+            "email": "hallo@masrisystems.com",
+            "priceRange": "€€",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Nettelbeckstraße",
+              "postalCode": "26131",
+              "addressLocality": "Oldenburg",
+              "addressRegion": "Niedersachsen",
+              "addressCountry": "DE"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 53.140118,
+              "longitude": 8.188813
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://github.com/masrisystems",
+              "https://www.linkedin.com/in/mohamad-masri-89778915a/",
+              "https://www.instagram.com/masrisystems/",
+              "https://www.facebook.com/profile.php?id=61582289406696",
+              "https://masrisystems.com/blog",
+              "https://g.page/r/CQl3_s6R1DkiEAE/review"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://masrisystems.com/#founder",
+            "name": "Mohamad Masri",
+            "jobTitle": "Founder & Lead Systems Engineer",
+            "worksFor": {
+              "@id": "https://masrisystems.com/#organization"
+            },
+            "url": "https://resume.masrisystems.com/",
+            "sameAs": [
+              "https://github.com/masrisystems",
+              "https://www.linkedin.com/in/mohamad-masri-89778915a/"
+            ],
+            "knowsAbout": [
+              "Web Development",
+              "Laravel",
+              "Vue.js",
+              "PHP",
+              "JavaScript",
+              "Software Engineering",
+              "AI Workflow Automation"
+            ]
+          }
+        ]
       }
     </script>
   </head>
@@ -343,7 +388,7 @@
             <img
               class="icon"
               aria-hidden="true"
-              src="images/icons/obsidian-clean.svg"
+              src="images/icons/obsidian.svg"
               alt=""
               width="19"
               height="19"
@@ -693,7 +738,7 @@
                     active: true,
                   },
                   {
-                    name: "Projects & Showcase",
+                    name: "Projects",
                     link: "https://masrisystems.com/brain/projects/",
                     class: "button-default",
                     logo: "images/icons/projects.svg",
@@ -720,7 +765,7 @@
                     name: "Omnivault AI",
                     link: "https://omnivault.masrisystems.com/",
                     class: "button-obsidian",
-                    logo: "images/icons/obsidian-clean.svg",
+                    logo: "images/icons/obsidian.svg",
                     aria_label: "Explore Omnivault AI Obsidian Template",
                     active: true,
                   },

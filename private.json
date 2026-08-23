@@ -111,7 +111,7 @@
                     "active": true
                 },
                 {
-                    "name": "Projects & Showcase",
+                    "name": "Projects",
                     "link": "https://masrisystems.com/brain/projects/",
                     "class": "button-default",
                     "logo": "images/icons/projects.svg",
@@ -138,7 +138,7 @@
                     "name": "Omnivault AI",
                     "link": "https://omnivault.masrisystems.com/",
                     "class": "button-obsidian",
-                    "logo": "images/icons/obsidian-clean.svg",
+                    "logo": "images/icons/obsidian.svg",
                     "aria_label": "Explore Omnivault AI Obsidian Template",
                     "active": true
                 }
