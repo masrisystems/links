@@ -137,20 +137,20 @@
           </div>
 
           <div class="social-quick-links" aria-label="Quick Social Links">
-            <a href="https://github.com/masrisystems" target="_blank" rel="noopener" class="social-quick-link" aria-label="GitHub Profile">
-              <img src="images/icons/github.svg" alt="GitHub" width="17" height="17" />
+            <a href="https://github.com/masrisystems" target="_blank" rel="noopener" class="social-quick-link quick-github" aria-label="GitHub Profile">
+              <img src="images/icons/github.svg" alt="GitHub" width="18" height="18" />
             </a>
-            <a href="https://www.linkedin.com/in/mohamad-masri-89778915a/" target="_blank" rel="noopener" class="social-quick-link" aria-label="LinkedIn Profile">
-              <img src="images/icons/linkedin.svg" alt="LinkedIn" width="17" height="17" />
+            <a href="https://www.linkedin.com/in/mohamad-masri-89778915a/" target="_blank" rel="noopener" class="social-quick-link quick-linkedin" aria-label="LinkedIn Profile">
+              <img src="images/icons/linkedin.svg" alt="LinkedIn" width="18" height="18" />
             </a>
-            <a href="https://www.instagram.com/masrisystems/" target="_blank" rel="noopener" class="social-quick-link" aria-label="Instagram Profile">
-              <img src="images/icons/instagram.svg" alt="Instagram" width="17" height="17" />
+            <a href="https://www.instagram.com/masrisystems/" target="_blank" rel="noopener" class="social-quick-link quick-instagram" aria-label="Instagram Profile">
+              <img src="images/icons/instagram.svg" alt="Instagram" width="18" height="18" />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61582289406696" target="_blank" rel="noopener" class="social-quick-link" aria-label="Facebook Page">
-              <img src="images/icons/facebook.svg" alt="Facebook" width="17" height="17" />
+            <a href="https://www.facebook.com/profile.php?id=61582289406696" target="_blank" rel="noopener" class="social-quick-link quick-facebook" aria-label="Facebook Page">
+              <img src="images/icons/facebook.svg" alt="Facebook" width="18" height="18" />
             </a>
-            <a href="https://wa.me/4917631579669" target="_blank" rel="noopener" class="social-quick-link" aria-label="WhatsApp Chat">
-              <img src="images/icons/whatsapp.svg" alt="WhatsApp" width="17" height="17" />
+            <a href="https://wa.me/4917631579669" target="_blank" rel="noopener" class="social-quick-link quick-whatsapp" aria-label="WhatsApp Chat">
+              <img src="images/icons/whatsapp.svg" alt="WhatsApp" width="18" height="18" />
             </a>
           </div>
 
@@ -255,6 +255,25 @@
               width="19"
               height="19"
             />Blog
+          </a>
+          <div class="button-group-separator"></div>
+          <span class="section-label" aria-hidden="true">Reviews &amp; Ratings</span>
+          <a
+            class="button button-google"
+            href="https://g.page/r/CQl3_s6R1DkiEAE/review"
+            target="_blank"
+            rel="noopener"
+            role="button"
+            aria-label="Leave a Google review"
+          >
+            <img
+              class="icon"
+              aria-hidden="true"
+              src="images/icons/google.svg"
+              alt=""
+              width="19"
+              height="19"
+            />Leave a Google Review (5.0 ★)
           </a>
         </nav>
 
@@ -375,8 +394,8 @@
           quickSocialsHtml = `<div class="social-quick-links" aria-label="Quick Social Links">`
           profile.quick_socials.forEach((social) => {
             quickSocialsHtml += `
-              <a href="${social.link}" target="_blank" rel="noopener" class="social-quick-link" aria-label="${social.aria_label}">
-                <img src="${social.logo}" alt="${social.name}" width="17" height="17" />
+              <a href="${social.link}" target="_blank" rel="noopener" class="social-quick-link ${social.class || ''}" aria-label="${social.aria_label}">
+                <img src="${social.logo}" alt="${social.name}" width="18" height="18" />
               </a>
             `
           })
@@ -498,30 +517,35 @@
               {
                 name: "GitHub",
                 link: "https://github.com/masrisystems",
+                class: "quick-github",
                 logo: "images/icons/github.svg",
                 aria_label: "GitHub Profile",
               },
               {
                 name: "LinkedIn",
                 link: "https://www.linkedin.com/in/mohamad-masri-89778915a/",
+                class: "quick-linkedin",
                 logo: "images/icons/linkedin.svg",
                 aria_label: "LinkedIn Profile",
               },
               {
                 name: "Instagram",
                 link: "https://www.instagram.com/masrisystems/",
+                class: "quick-instagram",
                 logo: "images/icons/instagram.svg",
                 aria_label: "Instagram Profile",
               },
               {
                 name: "Facebook",
                 link: "https://www.facebook.com/profile.php?id=61582289406696",
+                class: "quick-facebook",
                 logo: "images/icons/facebook.svg",
                 aria_label: "Facebook Page",
               },
               {
                 name: "WhatsApp",
                 link: "https://wa.me/4917631579669",
+                class: "quick-whatsapp",
                 logo: "images/icons/whatsapp.svg",
                 aria_label: "WhatsApp Chat",
               },
@@ -610,50 +634,10 @@
                 ],
               },
               {
-                label: "Connect",
+                label: "Reviews & Ratings",
                 buttons: [
                   {
-                    name: "GitHub",
-                    link: "https://github.com/masrisystems",
-                    class: "button-github",
-                    logo: "images/icons/github.svg",
-                    aria_label: "View my GitHub profile",
-                    active: true,
-                  },
-                  {
-                    name: "Instagram",
-                    link: "https://www.instagram.com/masrisystems/",
-                    class: "button-instagram",
-                    logo: "images/icons/instagram.svg",
-                    aria_label: "Follow me on Instagram",
-                    active: true,
-                  },
-                  {
-                    name: "Facebook",
-                    link: "https://www.facebook.com/profile.php?id=61582289406696",
-                    class: "button-faceb",
-                    logo: "images/icons/facebook.svg",
-                    aria_label: "Connect on Facebook",
-                    active: true,
-                  },
-                  {
-                    name: "LinkedIn",
-                    link: "https://www.linkedin.com/in/mohamad-masri-89778915a/",
-                    class: "button-linked",
-                    logo: "images/icons/linkedin.svg",
-                    aria_label: "Connect on LinkedIn",
-                    active: true,
-                  },
-                  {
-                    name: "WhatsApp",
-                    link: "https://wa.me/4917631579669",
-                    class: "button-whatsapp",
-                    logo: "images/icons/whatsapp.svg",
-                    aria_label: "Message me on WhatsApp",
-                    active: true,
-                  },
-                  {
-                    name: "Google Reviews",
+                    name: "Leave a Google Review (5.0 ★)",
                     link: "https://g.page/r/CQl3_s6R1DkiEAE/review",
                     class: "button-google",
                     logo: "images/icons/google.svg",

@@ -189,7 +189,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.75rem;
   margin: 0.85rem 0 0.25rem;
 }
 
@@ -197,23 +197,48 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--color-border);
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
 }
 
 .social-quick-link:hover {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.08);
+  filter: brightness(1.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.social-quick-link.quick-github {
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.social-quick-link.quick-linkedin {
+  background: #2867b2;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.social-quick-link.quick-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.social-quick-link.quick-facebook {
+  background: #0866FF;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.social-quick-link.quick-whatsapp {
+  background: #25D366;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .social-quick-link img {
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
   filter: brightness(0) invert(1);
 }
 

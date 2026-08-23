@@ -16,30 +16,35 @@
         {
             "name": "GitHub",
             "link": "https://github.com/masrisystems",
+            "class": "quick-github",
             "logo": "images/icons/github.svg",
             "aria_label": "GitHub Profile"
         },
         {
             "name": "LinkedIn",
             "link": "https://www.linkedin.com/in/mohamad-masri-89778915a/",
+            "class": "quick-linkedin",
             "logo": "images/icons/linkedin.svg",
             "aria_label": "LinkedIn Profile"
         },
         {
             "name": "Instagram",
             "link": "https://www.instagram.com/masrisystems/",
+            "class": "quick-instagram",
             "logo": "images/icons/instagram.svg",
             "aria_label": "Instagram Profile"
         },
         {
             "name": "Facebook",
             "link": "https://www.facebook.com/profile.php?id=61582289406696",
+            "class": "quick-facebook",
             "logo": "images/icons/facebook.svg",
             "aria_label": "Facebook Page"
         },
         {
             "name": "WhatsApp",
             "link": "https://wa.me/4917631579669",
+            "class": "quick-whatsapp",
             "logo": "images/icons/whatsapp.svg",
             "aria_label": "WhatsApp Chat"
         }
@@ -107,7 +112,7 @@
                 },
                 {
                     "name": "Projects & Showcase",
-                    "link": "https://masrisystems.com/brain/projects/",
+                    "link": "https://masrisystems.com/brain/projects/main",
                     "class": "button-default",
                     "logo": "images/icons/generic-code.svg",
                     "aria_label": "Explore digital flagships and client projects",
@@ -140,50 +145,10 @@
             ]
         },
         {
-            "label": "Connect",
+            "label": "Reviews & Ratings",
             "buttons": [
                 {
-                    "name": "GitHub",
-                    "link": "https://github.com/masrisystems",
-                    "class": "button-github",
-                    "logo": "images/icons/github.svg",
-                    "aria_label": "View my GitHub profile",
-                    "active": true
-                },
-                {
-                    "name": "Instagram",
-                    "link": "https://www.instagram.com/masrisystems/",
-                    "class": "button-instagram",
-                    "logo": "images/icons/instagram.svg",
-                    "aria_label": "Follow me on Instagram",
-                    "active": true
-                },
-                {
-                    "name": "Facebook",
-                    "link": "https://www.facebook.com/profile.php?id=61582289406696",
-                    "class": "button-faceb",
-                    "logo": "images/icons/facebook.svg",
-                    "aria_label": "Connect on Facebook",
-                    "active": true
-                },
-                {
-                    "name": "LinkedIn",
-                    "link": "https://www.linkedin.com/in/mohamad-masri-89778915a/",
-                    "class": "button-linked",
-                    "logo": "images/icons/linkedin.svg",
-                    "aria_label": "Connect on LinkedIn",
-                    "active": true
-                },
-                {
-                    "name": "WhatsApp",
-                    "link": "https://wa.me/4917631579669",
-                    "class": "button-whatsapp",
-                    "logo": "images/icons/whatsapp.svg",
-                    "aria_label": "Message me on WhatsApp",
-                    "active": true
-                },
-                {
-                    "name": "Google Reviews",
+                    "name": "Leave a Google Review (5.0 ★)",
                     "link": "https://g.page/r/CQl3_s6R1DkiEAE/review",
                     "class": "button-google",
                     "logo": "images/icons/google.svg",
