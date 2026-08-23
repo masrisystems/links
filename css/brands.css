@@ -51,6 +51,13 @@
 	--button-background:#25D1DA;
 }
 
+/* Apple */
+.button-apple {
+	--button-text:#ffffff;
+	--button-background:#000000;
+	--button-border:1px solid #FFFFFF;
+}
+
 /* Apple App Store */
 .button-appstore {
 	--button-text:#FFFFFF;
