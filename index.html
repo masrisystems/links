@@ -135,6 +135,25 @@
           <div class="contact-info">
             <a href="tel:+4917631579669" aria-label="Call Masri Systems">+49 (176) 31579669</a>
           </div>
+
+          <div class="social-quick-links" aria-label="Quick Social Links">
+            <a href="https://github.com/masrisystems" target="_blank" rel="noopener" class="social-quick-link" aria-label="GitHub Profile">
+              <img src="images/icons/github.svg" alt="GitHub" width="17" height="17" />
+            </a>
+            <a href="https://www.linkedin.com/in/mohamad-masri-89778915a/" target="_blank" rel="noopener" class="social-quick-link" aria-label="LinkedIn Profile">
+              <img src="images/icons/linkedin.svg" alt="LinkedIn" width="17" height="17" />
+            </a>
+            <a href="https://www.instagram.com/masrisystems/" target="_blank" rel="noopener" class="social-quick-link" aria-label="Instagram Profile">
+              <img src="images/icons/instagram.svg" alt="Instagram" width="17" height="17" />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61582289406696" target="_blank" rel="noopener" class="social-quick-link" aria-label="Facebook Page">
+              <img src="images/icons/facebook.svg" alt="Facebook" width="17" height="17" />
+            </a>
+            <a href="https://wa.me/4917631579669" target="_blank" rel="noopener" class="social-quick-link" aria-label="WhatsApp Chat">
+              <img src="images/icons/whatsapp.svg" alt="WhatsApp" width="17" height="17" />
+            </a>
+          </div>
+
           <div class="availability-badge" aria-label="Currently available for projects">
             <span class="pulse-dot" aria-hidden="true"></span>
             Available for Projects
@@ -350,6 +369,20 @@
           })
         }
 
+        // Quick Socials
+        let quickSocialsHtml = ""
+        if (profile.quick_socials && Array.isArray(profile.quick_socials)) {
+          quickSocialsHtml = `<div class="social-quick-links" aria-label="Quick Social Links">`
+          profile.quick_socials.forEach((social) => {
+            quickSocialsHtml += `
+              <a href="${social.link}" target="_blank" rel="noopener" class="social-quick-link" aria-label="${social.aria_label}">
+                <img src="${social.logo}" alt="${social.name}" width="17" height="17" />
+              </a>
+            `
+          })
+          quickSocialsHtml += `</div>`
+        }
+
         document.getElementById("card").innerHTML = `
             <header class="profile">
                 <a href="https://masrisystems.com/" target="_blank" rel="noopener" class="logo" aria-label="Visit ${profile.company.name} website">
@@ -365,6 +398,7 @@
                 <div class="contact-info">
                     <a href="tel:${profile.contact.phone_link}" aria-label="Call ${profile.company.name}">${profile.contact.phone_display}</a>
                 </div>
+                ${quickSocialsHtml}
                 <div class="availability-badge" aria-label="Currently available for projects">
                     <span class="pulse-dot" aria-hidden="true"></span>
                     Available for Projects
@@ -460,6 +494,38 @@
               phone_link: "+4917631579669",
               email: "hallo@masrisystems.com",
             },
+            quick_socials: [
+              {
+                name: "GitHub",
+                link: "https://github.com/masrisystems",
+                logo: "images/icons/github.svg",
+                aria_label: "GitHub Profile",
+              },
+              {
+                name: "LinkedIn",
+                link: "https://www.linkedin.com/in/mohamad-masri-89778915a/",
+                logo: "images/icons/linkedin.svg",
+                aria_label: "LinkedIn Profile",
+              },
+              {
+                name: "Instagram",
+                link: "https://www.instagram.com/masrisystems/",
+                logo: "images/icons/instagram.svg",
+                aria_label: "Instagram Profile",
+              },
+              {
+                name: "Facebook",
+                link: "https://www.facebook.com/profile.php?id=61582289406696",
+                logo: "images/icons/facebook.svg",
+                aria_label: "Facebook Page",
+              },
+              {
+                name: "WhatsApp",
+                link: "https://wa.me/4917631579669",
+                logo: "images/icons/whatsapp.svg",
+                aria_label: "WhatsApp Chat",
+              },
+            ],
             sections: [
               {
                 label: "Work with me",

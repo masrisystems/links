@@ -12,6 +12,38 @@
         "phone_link": "+4917631579669",
         "email": "hallo@masrisystems.com"
     },
+    "quick_socials": [
+        {
+            "name": "GitHub",
+            "link": "https://github.com/masrisystems",
+            "logo": "images/icons/github.svg",
+            "aria_label": "GitHub Profile"
+        },
+        {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/mohamad-masri-89778915a/",
+            "logo": "images/icons/linkedin.svg",
+            "aria_label": "LinkedIn Profile"
+        },
+        {
+            "name": "Instagram",
+            "link": "https://www.instagram.com/masrisystems/",
+            "logo": "images/icons/instagram.svg",
+            "aria_label": "Instagram Profile"
+        },
+        {
+            "name": "Facebook",
+            "link": "https://www.facebook.com/profile.php?id=61582289406696",
+            "logo": "images/icons/facebook.svg",
+            "aria_label": "Facebook Page"
+        },
+        {
+            "name": "WhatsApp",
+            "link": "https://wa.me/4917631579669",
+            "logo": "images/icons/whatsapp.svg",
+            "aria_label": "WhatsApp Chat"
+        }
+    ],
     "legal": {
         "tax_id_label": "USt-IDNr.",
         "tax_id": "DE454025250",
