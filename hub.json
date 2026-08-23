@@ -89,7 +89,7 @@
                 },
                 {
                     "name": "Find Us on Google Maps",
-                    "link": "https://maps.google.com/?q=Masri+Systems+Nettelbeckstraße+26131+Oldenburg",
+                    "link": "https://www.google.com/maps?cid=2466235993670186761",
                     "class": "button-google",
                     "logo": "images/icons/generic-map.svg",
                     "aria_label": "Find Masri Systems on Google Maps",
