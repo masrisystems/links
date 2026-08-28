@@ -14,6 +14,7 @@
   --color-text:                #faf9f5;
   --color-text-muted:          #a09d96;
   --color-bg:                  #181715;
+  --color-bg-light:            #fdf8f5;
   --color-surface:             #252320;
   --color-border:              rgba(230, 223, 216, 0.14);
   --color-accent:              #cc785c;
@@ -111,10 +112,9 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-md);
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: var(--color-bg-light, #fdf8f5);
+  border: 1px solid rgba(230, 223, 216, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(204, 120, 92, 0.15);
   padding: 10px;
   animation: logoFloat 4s ease-in-out infinite;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -127,7 +127,7 @@ body {
 
 .logo:hover {
   transform: scale(1.08);
-  box-shadow: 0 4px 24px hsla(0, 0%, 100%, 0.06);
+  box-shadow: 0 6px 28px rgba(204, 120, 92, 0.35), 0 0 0 1px rgba(204, 120, 92, 0.3);
 }
 
 .logo img {
