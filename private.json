@@ -22,10 +22,10 @@
         },
         {
             "name": "LinkedIn",
-            "link": "https://www.linkedin.com/in/mohamad-masri-89778915a/",
+            "link": "https://www.linkedin.com/company/masri-systems",
             "class": "quick-linkedin",
             "logo": "images/icons/linkedin.svg",
-            "aria_label": "LinkedIn Profile"
+            "aria_label": "LinkedIn Company Page"
         },
         {
             "name": "Instagram",
