@@ -718,26 +718,66 @@ body {
 .trust-stats {
   display: flex;
   justify-content: space-around;
-  gap: var(--spacing-md);
+  gap: 0.75rem;
 }
 
 .trust-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.75rem 0.5rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(230, 223, 216, 0.08);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  flex: 1;
+}
+
+.trust-stat:hover,
+.trust-stat:focus-visible {
+  background: rgba(204, 120, 92, 0.12);
+  border-color: rgba(204, 120, 92, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
 
 .trust-stat .stat-value {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-text);
   line-height: 1.2;
+  transition: color 0.2s ease;
+}
+
+.trust-stat:hover .stat-value {
+  color: var(--color-accent);
 }
 
 .trust-stat .stat-label {
   display: block;
   font-size: 0.6875rem;
   color: var(--color-text-muted);
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.trust-stat:hover .stat-label {
+  color: var(--color-text);
+}
+
+.trust-stat .star-icon {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fbbf24;
 }
 
 /* ── Footer ─────────────────────────────────────── */
@@ -904,8 +944,15 @@ body {
   }
 
   .trust-stats {
-    flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: 0.4rem;
+  }
+
+  .trust-stat {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .trust-stat .stat-value {
+    font-size: 1.25rem;
   }
 
   .sticky-cta-text {
