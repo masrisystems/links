@@ -18,30 +18,35 @@
         {
             "name": "GitHub",
             "link": "https://github.com/masrisystems",
+            "class": "quick-github",
             "logo": "images/icons/github.svg",
             "aria_label": "GitHub Profile"
         },
         {
             "name": "LinkedIn",
             "link": "https://www.linkedin.com/company/masri-systems",
+            "class": "quick-linkedin",
             "logo": "images/icons/linkedin.svg",
             "aria_label": "LinkedIn Company Page"
         },
         {
             "name": "Instagram",
             "link": "https://www.instagram.com/masrisystems/",
+            "class": "quick-instagram",
             "logo": "images/icons/instagram.svg",
             "aria_label": "Instagram Profile"
         },
         {
             "name": "Facebook",
             "link": "https://www.facebook.com/profile.php?id=61582289406696",
+            "class": "quick-facebook",
             "logo": "images/icons/facebook.svg",
             "aria_label": "Facebook Page"
         },
         {
             "name": "WhatsApp",
             "link": "https://wa.me/4917631579669",
+            "class": "quick-whatsapp",
             "logo": "images/icons/whatsapp.svg",
             "aria_label": "WhatsApp Contact"
         }
@@ -54,7 +59,7 @@
                     "name": "Book a Free 30-Min Discovery Call",
                     "link": "https://cal.com/masrisystems-f7j951/30min?duration=30",
                     "class": "button-cal",
-                    "logo": "images/icons/cal.svg",
+                    "logo": "images/icons/calendar.svg",
                     "aria_label": "Book a Free 30-Minute Discovery Call",
                     "active": true
                 },
@@ -62,7 +67,7 @@
                     "name": "2-Minute Project Cost Estimator",
                     "link": "https://masrisystems.com/pricing",
                     "class": "button-default",
-                    "logo": "images/icons/generic-calendar.svg",
+                    "logo": "images/icons/calculator.svg",
                     "aria_label": "Instant Project Cost Estimator",
                     "active": true
                 },
@@ -70,7 +75,7 @@
                     "name": "Official Website & Flagship",
                     "link": "https://masrisystems.com/",
                     "class": "button-default",
-                    "logo": "images/icons/generic-website.svg",
+                    "logo": "images/icons/globe.svg",
                     "aria_label": "Visit Masri Systems Official Website",
                     "active": true
                 },
@@ -112,7 +117,7 @@
                     "name": "Custom Software & Web Apps (VILT Stack)",
                     "link": "https://masrisystems.com/services/software-development",
                     "class": "button-default",
-                    "logo": "images/icons/generic-code.svg",
+                    "logo": "images/icons/code.svg",
                     "aria_label": "Custom Software & Web Application Development",
                     "active": true
                 },
@@ -120,7 +125,7 @@
                     "name": "High-Performance Webdesign (<0.8s LCP)",
                     "link": "https://masrisystems.com/services/website-design",
                     "class": "button-default",
-                    "logo": "images/icons/generic-homepage.svg",
+                    "logo": "images/icons/layout.svg",
                     "aria_label": "Modern High-Performance Webdesign",
                     "active": true
                 },
@@ -128,7 +133,7 @@
                     "name": "AI Agents & Workflow Automation",
                     "link": "https://masrisystems.com/automation",
                     "class": "button-default",
-                    "logo": "images/icons/generic-computer.svg",
+                    "logo": "images/icons/bot.svg",
                     "aria_label": "AI Agents and Workflow Automation",
                     "active": true
                 },
@@ -136,7 +141,7 @@
                     "name": "Headless E-Commerce & Online Stores",
                     "link": "https://masrisystems.com/services/ecommerce-development",
                     "class": "button-default",
-                    "logo": "images/icons/generic-shopping-bag.svg",
+                    "logo": "images/icons/shopping-bag.svg",
                     "aria_label": "Headless E-Commerce & Online Shops",
                     "active": true
                 },
@@ -144,7 +149,7 @@
                     "name": "Mobile App Development (iOS & Android)",
                     "link": "https://masrisystems.com/services/mobile-applications",
                     "class": "button-default",
-                    "logo": "images/icons/generic-phone.svg",
+                    "logo": "images/icons/smartphone.svg",
                     "aria_label": "Mobile App Development for iOS and Android",
                     "active": true
                 }
@@ -157,15 +162,15 @@
                     "name": "Tech Blog & Brain Vault",
                     "link": "https://masrisystems.com/brain",
                     "class": "button-default",
-                    "logo": "images/icons/generic-blog.svg",
+                    "logo": "images/icons/blog.svg",
                     "aria_label": "Tech Blog and Knowledge Brain",
                     "active": true
                 },
                 {
                     "name": "Founder Resume & Portfolio",
                     "link": "https://resume.masrisystems.com/",
-                    "class": "button-default",
-                    "logo": "images/icons/generic-website.svg",
+                    "class": "button-resume",
+                    "logo": "images/icons/resume.svg",
                     "aria_label": "Founder Interactive Resume",
                     "active": true
                 },
