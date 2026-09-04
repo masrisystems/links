@@ -38,6 +38,36 @@
 	--button-border:1px solid rgba(230, 223, 216, 0.2);
 }
 
+/* Resume — Discreet / Subtle Button */
+.button.button-resume {
+	--button-text: var(--color-text-muted, #a09d96);
+	--button-background: rgba(255, 255, 255, 0.02);
+	--button-border: 1px solid rgba(230, 223, 216, 0.09);
+	font-size: 0.84rem;
+	font-weight: 500;
+	min-height: 40px;
+	padding: 0.55rem 0.85rem;
+}
+
+.button.button-resume .icon {
+	opacity: 0.45;
+	filter: grayscale(1);
+	transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.button.button-resume:hover {
+	--button-text: var(--color-text, #faf9f5);
+	--button-background: rgba(255, 255, 255, 0.06);
+	--button-border: 1px solid rgba(230, 223, 216, 0.22);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+	transform: translateY(-2px) scale(1.01);
+}
+
+.button.button-resume:hover .icon {
+	opacity: 0.85;
+	filter: grayscale(0);
+}
+
 /* Amazon */
 .button-amazon {
 	--button-text:#000000;
@@ -304,6 +334,13 @@
 .button-kickstarter {
 	--button-text:#ffffff;
 	--button-background:#05ce78;
+}
+
+/* Kleinanzeigen */
+.button-kleinanzeigen {
+	--button-text:#ffffff;
+	--button-background:#86B817;
+	--button-border:1px solid #72a114;
 }
 
 /* Kit */

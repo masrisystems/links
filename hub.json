@@ -73,6 +73,14 @@
                     "logo": "images/icons/generic-website.svg",
                     "aria_label": "Visit Masri Systems Official Website",
                     "active": true
+                },
+                {
+                    "name": "Kleinanzeigen Pro Service-Shop",
+                    "link": "https://www.kleinanzeigen.de/pro/masrisystems",
+                    "class": "button-kleinanzeigen",
+                    "logo": "images/icons/kleinanzeigen.svg",
+                    "aria_label": "Masri Systems auf Kleinanzeigen Pro",
+                    "active": true
                 }
             ]
         },
@@ -93,22 +101,6 @@
                     "class": "button-google",
                     "logo": "images/icons/generic-map.svg",
                     "aria_label": "Find Masri Systems on Google Maps",
-                    "active": true
-                },
-                {
-                    "name": "Apple Maps Business Listing",
-                    "link": "https://maps.apple.com/?q=Masri%20Systems%20-%20Softwareentwicklung&near=53.1400587,8.188068399999999",
-                    "class": "button-apple",
-                    "logo": "images/icons/apple.svg",
-                    "aria_label": "View Masri Systems on Apple Maps",
-                    "active": true
-                },
-                {
-                    "name": "Bing Places / Maps Listing",
-                    "link": "https://www.bing.com/maps?q=Masri%20Systems%20-%20Softwareentwicklung&cp=53.1400587~8.188068399999999",
-                    "class": "button-microsoft",
-                    "logo": "images/icons/microsoft.svg",
-                    "aria_label": "View Masri Systems on Bing Maps",
                     "active": true
                 }
             ]

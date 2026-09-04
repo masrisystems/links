@@ -90,6 +90,14 @@
                     "active": true
                 },
                 {
+                    "name": "Kleinanzeigen Pro",
+                    "link": "https://www.kleinanzeigen.de/pro/masrisystems",
+                    "class": "button-kleinanzeigen",
+                    "logo": "images/icons/kleinanzeigen.svg",
+                    "aria_label": "Masri Systems auf Kleinanzeigen Pro",
+                    "active": true
+                },
+                {
                     "name": "Upwork",
                     "link": "https://www.upwork.com/freelancers/~0141405ef520d50588?mp_source=share",
                     "class": "button-upwork",
@@ -135,19 +143,19 @@
                     "active": true
                 },
                 {
-                    "name": "Resume",
-                    "link": "https://resume.masrisystems.com/",
-                    "class": "button-default",
-                    "logo": "images/icons/resume.svg",
-                    "aria_label": "Visit my resume at resume.masrisystems.com",
-                    "active": true
-                },
-                {
                     "name": "Omnivault AI",
                     "link": "https://omnivault.masrisystems.com/",
                     "class": "button-obsidian",
                     "logo": "images/icons/obsidian.svg",
                     "aria_label": "Explore Omnivault AI Obsidian Template",
+                    "active": true
+                },
+                {
+                    "name": "Resume",
+                    "link": "https://resume.masrisystems.com/",
+                    "class": "button-resume",
+                    "logo": "images/icons/resume.svg",
+                    "aria_label": "Visit my resume at resume.masrisystems.com",
                     "active": true
                 }
             ]
