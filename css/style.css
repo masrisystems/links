@@ -89,7 +89,7 @@ body {
   border-radius: var(--radius-lg);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
-  padding: var(--spacing-2xl) var(--spacing-xl);
+  padding: 1.25rem var(--spacing-xl) var(--spacing-2xl);
   text-align: center;
   animation: cardFadeIn 0.6s ease-out;
 }
@@ -278,7 +278,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 2rem;
 }
 
 .card-top-bar.card-top-bar-back {
@@ -979,8 +979,12 @@ body {
 /* ── Responsive ─────────────────────────────────── */
 @media (max-width: 480px) {
   .card {
-    padding: var(--spacing-xl) var(--spacing-lg);
+    padding: 1rem var(--spacing-lg) var(--spacing-xl);
     border-radius: var(--radius-md);
+  }
+
+  .card-top-bar {
+    margin-bottom: 1.75rem;
   }
 
   .profile h1 {
