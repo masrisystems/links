@@ -451,17 +451,31 @@ body {
 }
 
 .qr-invite-actions {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
-  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (max-width: 360px) {
+  .qr-invite-actions {
+    grid-template-columns: 1fr;
+  }
 }
 
 .qr-invite-actions .button-action {
-  flex: 1 1 110px;
   width: 100%;
+  height: 38px;
   min-height: 38px;
-  padding: 0.5rem 0.75rem;
+  max-height: 38px;
+  padding: 0 0.75rem;
   box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1;
   white-space: nowrap;
 }
 

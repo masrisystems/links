@@ -68,7 +68,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css?v=16" />
+    <link rel="stylesheet" href="css/style.css?v=17" />
     <link rel="stylesheet" href="css/brands.css?v=3" />
 
     <!-- FOUC Prevention -->
@@ -263,7 +263,7 @@
           <section class="qr-invite-section" aria-label="Invite and connect via QR code or native share">
             <div class="qr-invite-box">
               <div class="qr-preview-container" data-action="open-qr-modal" role="button" tabindex="0" aria-label="Enlarge QR code for easy scanning">
-                <img src="images/qr-code.png" alt="QR Code to visit Masri Systems Links" class="qr-code-img" width="104" height="104" loading="eager" />
+                <img src="images/qr-code.png?v=3" alt="QR Code to visit Masri Systems Links" class="qr-code-img" width="104" height="104" loading="eager" />
                 <span class="qr-scan-badge" aria-hidden="true">
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 9v6M3 9v6M21 15v6h-6M3 9h6V3"/></svg>
                   Scan
@@ -586,7 +586,7 @@
         <h2 class="qr-modal-title" id="qrModalTitle">Scan to Connect</h2>
         <p class="qr-modal-subtitle">Point your phone camera to open Masri Systems Links instantly</p>
         <div class="qr-modal-frame">
-          <img src="images/qr-code.png" alt="Masri Systems Links QR Code" width="220" height="220" />
+          <img src="images/qr-code.png?v=3" alt="Masri Systems Links QR Code" width="220" height="220" />
         </div>
         <div class="qr-modal-actions">
           <button type="button" class="button-action button-share-main" data-action="share-profile" aria-label="Share via native share sheet">
@@ -695,7 +695,7 @@
                 <section class="qr-invite-section" aria-label="Invite and connect via QR code or native share">
                   <div class="qr-invite-box">
                     <div class="qr-preview-container" data-action="open-qr-modal" role="button" tabindex="0" aria-label="Enlarge QR code for easy scanning">
-                      <img src="images/qr-code.png" alt="QR Code to visit Masri Systems Links" class="qr-code-img" width="104" height="104" loading="eager" />
+                      <img src="images/qr-code.png?v=3" alt="QR Code to visit Masri Systems Links" class="qr-code-img" width="104" height="104" loading="eager" />
                       <span class="qr-scan-badge" aria-hidden="true">
                         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 9v6M3 9v6M21 15v6h-6M3 9h6V3"/></svg>
                         Scan
@@ -1056,7 +1056,7 @@
           ? "Masri Systems — Links Hub | Softwareentwicklung, AI & Webdesign Oldenburg:\n" + window.location.href
           : "Connect with Masri Systems — Oldenburg & Remote · Softwareentwicklung, AI & Webdesign:\n" + window.location.href
         const shareUrl = window.location.href.split("#")[0]
-        const qrImagePath = isHub ? "images/qr-code-hub.png" : "images/qr-code.png"
+        const qrImagePath = isHub ? "images/qr-code-hub.png?v=3" : "images/qr-code.png?v=3"
 
         let fileToShare = null
         try {
