@@ -68,7 +68,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css?v=12" />
+    <link rel="stylesheet" href="css/style.css?v=13" />
     <link rel="stylesheet" href="css/brands.css?v=4" />
 
     <!-- FOUC Prevention -->
@@ -123,6 +123,18 @@
 
     <main class="page" id="page" role="main">
       <div class="card" id="card">
+        <!-- Top Utility Bar -->
+        <div class="card-top-bar">
+          <button type="button" class="top-bar-btn" data-action="share-profile" aria-label="Share this links page">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+            <span>Share</span>
+          </button>
+          <button type="button" class="top-bar-btn" data-action="open-qr-modal" aria-label="Open QR code modal">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>QR Code</span>
+          </button>
+        </div>
+
         <header class="profile">
           <a
             href="https://masrisystems.com/"
@@ -145,7 +157,7 @@
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             </svg>
           </h1>
-          <p class="subtitle">📍 Oldenburg &amp; Remote · Softwareentwicklung, AI &amp; Webdesign</p>
+          <p class="subtitle">Oldenburg &amp; Remote · Softwareentwicklung, AI &amp; Webdesign</p>
           <p class="tagline">"Rich in features, not in pricing."</p>
 
           <div class="social-quick-links" aria-label="Quick Social Links">
@@ -170,6 +182,37 @@
             <span class="pulse-dot" aria-hidden="true"></span>
             Available for Projects
           </div>
+
+          <!-- QR Invite Section -->
+          <section class="qr-invite-section" aria-label="Invite and connect via QR code or native share">
+            <div class="qr-invite-box">
+              <div class="qr-preview-container" data-action="open-qr-modal" role="button" tabindex="0" aria-label="Enlarge QR code for easy scanning">
+                <img src="images/qr-code-hub.png" alt="QR Code to visit Masri Systems Links Hub" class="qr-code-img" width="104" height="104" loading="eager" />
+                <span class="qr-scan-badge" aria-hidden="true">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 9v6M3 9v6M21 15v6h-6M3 9h6V3"/></svg>
+                  Scan
+                </span>
+              </div>
+              <div class="qr-invite-content">
+                <span class="qr-invite-label">Direct Invite &amp; Connect</span>
+                <p class="qr-invite-desc">Scan with any phone camera or share directly to nearby devices.</p>
+                <div class="qr-invite-actions">
+                  <button type="button" class="button-action button-share-main" data-action="share-profile" aria-label="Share page via native share sheet">
+                    <svg class="action-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                    </svg>
+                    <span>Share Page</span>
+                  </button>
+                  <button type="button" class="button-action button-qr-expand" data-action="open-qr-modal" aria-label="View enlarged QR code">
+                    <svg class="action-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    <span>View QR</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
         </header>
 
         <hr class="divider" aria-hidden="true" />
@@ -430,6 +473,45 @@
       </a>
     </div>
 
+    <!-- QR Full-screen Modal Backdrop -->
+    <div class="qr-modal-backdrop" id="qrModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="qrModalTitle" tabindex="-1">
+      <div class="qr-modal">
+        <button type="button" class="qr-modal-close" data-action="close-qr-modal" aria-label="Close QR modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <h2 class="qr-modal-title" id="qrModalTitle">Scan to Connect</h2>
+        <p class="qr-modal-subtitle">Point your phone camera to open Masri Systems Links Hub instantly</p>
+        <div class="qr-modal-frame">
+          <img src="images/qr-code-hub.png" alt="Masri Systems Links Hub QR Code" width="220" height="220" />
+        </div>
+        <div class="qr-modal-actions">
+          <button type="button" class="button-action button-share-main" data-action="share-profile" aria-label="Share via native share sheet">
+            <svg class="action-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+            <span>Share via AirDrop, Quick Share, WhatsApp...</span>
+          </button>
+          <a href="images/qr-code-hub.png" download="masrisystems-hub-qr.png" class="button-action button-qr-expand" aria-label="Download QR code image">
+            <svg class="action-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download QR Image</span>
+          </a>
+          <button type="button" class="button-action button-qr-expand" data-action="copy-link" aria-label="Copy page link to clipboard">
+            <svg class="action-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy Link</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="share-toast" id="shareToast" role="status" aria-live="polite"></div>
+
     <script>
       function render(profile) {
         // Set background image
@@ -483,6 +565,18 @@
         const contactEmail = profile.contact?.email || "hallo@masrisystems.com"
 
         document.getElementById("card").innerHTML = `
+            <!-- Top Utility Bar -->
+            <div class="card-top-bar">
+              <button type="button" class="top-bar-btn" data-action="share-profile" aria-label="Share this links page">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                <span>Share</span>
+              </button>
+              <button type="button" class="top-bar-btn" data-action="open-qr-modal" aria-label="Open QR code modal">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                <span>QR Code</span>
+              </button>
+            </div>
+
             <header class="profile">
                 <a href="https://masrisystems.com/" target="_blank" rel="noopener" class="logo" aria-label="Visit ${companyName} website">
                     <img src="${logoUrl}" alt="${companyName} Logo" width="44" height="44" loading="eager">
@@ -500,6 +594,37 @@
                     <span class="pulse-dot" aria-hidden="true"></span>
                     Available for Projects
                 </div>
+
+                <!-- QR Invite Section -->
+                <section class="qr-invite-section" aria-label="Invite and connect via QR code or native share">
+                  <div class="qr-invite-box">
+                    <div class="qr-preview-container" data-action="open-qr-modal" role="button" tabindex="0" aria-label="Enlarge QR code for easy scanning">
+                      <img src="images/qr-code-hub.png" alt="QR Code to visit Masri Systems Links Hub" class="qr-code-img" width="104" height="104" loading="eager" />
+                      <span class="qr-scan-badge" aria-hidden="true">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 9v6M3 9v6M21 15v6h-6M3 9h6V3"/></svg>
+                        Scan
+                      </span>
+                    </div>
+                    <div class="qr-invite-content">
+                      <span class="qr-invite-label">Direct Invite &amp; Connect</span>
+                      <p class="qr-invite-desc">Scan with any phone camera or share directly to nearby devices.</p>
+                      <div class="qr-invite-actions">
+                        <button type="button" class="button-action button-share-main" data-action="share-profile" aria-label="Share page via native share sheet">
+                          <svg class="action-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                          </svg>
+                          <span>Share Page</span>
+                        </button>
+                        <button type="button" class="button-action button-qr-expand" data-action="open-qr-modal" aria-label="View enlarged QR code">
+                          <svg class="action-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>
+                          </svg>
+                          <span>View QR</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </section>
             </header>
 
             <hr class="divider" aria-hidden="true">
@@ -605,6 +730,165 @@
           { passive: true },
         )
       }
+
+      // Toast notification helper
+      function showToast(message) {
+        const toast = document.getElementById("shareToast")
+        if (!toast) return
+        toast.innerHTML = `
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5db872" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>${message}</span>
+        `
+        toast.classList.add("show")
+        clearTimeout(window.__toastTimeout)
+        window.__toastTimeout = setTimeout(() => {
+          toast.classList.remove("show")
+        }, 2800)
+      }
+
+      // Copy link to clipboard
+      async function copyLinkToClipboard() {
+        const url = window.location.href.split("#")[0]
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(url)
+          } else {
+            const input = document.createElement("textarea")
+            input.value = url
+            input.style.position = "fixed"
+            input.style.opacity = "0"
+            document.body.appendChild(input)
+            input.select()
+            document.execCommand("copy")
+            document.body.removeChild(input)
+          }
+          showToast("Link copied to clipboard!")
+        } catch (err) {
+          window.prompt("Copy this link:", url)
+        }
+      }
+
+      // Native share with file support (Bluetooth, AirDrop, Samsung Quick Share, WhatsApp)
+      async function shareProfile() {
+        const isHub = window.location.pathname.includes("hub")
+        const shareTitle = isHub ? "Masri Systems — Links Hub" : "Masri Systems — Links"
+        const shareText = isHub
+          ? "Masri Systems — Links Hub | Softwareentwicklung, AI & Webdesign Oldenburg:\n" + window.location.href
+          : "Connect with Masri Systems — Oldenburg & Remote · Softwareentwicklung, AI & Webdesign:\n" + window.location.href
+        const shareUrl = window.location.href.split("#")[0]
+        const qrImagePath = isHub ? "images/qr-code-hub.png" : "images/qr-code.png"
+
+        let fileToShare = null
+        try {
+          const res = await fetch(qrImagePath)
+          if (res.ok) {
+            const blob = await res.blob()
+            fileToShare = new File([blob], "masrisystems-links-qr.png", { type: "image/png" })
+          }
+        } catch (e) {
+          console.warn("Could not prepare QR image file for sharing:", e)
+        }
+
+        // Web Share Level 2 with file (Triggers Quick Share, AirDrop, Bluetooth, WhatsApp)
+        if (fileToShare && navigator.canShare && navigator.canShare({ files: [fileToShare] })) {
+          try {
+            await navigator.share({
+              files: [fileToShare],
+              title: shareTitle,
+              text: shareText
+            })
+            return
+          } catch (err) {
+            if (err.name === "AbortError") return
+            console.warn("File share failed or canceled, attempting URL share:", err)
+          }
+        }
+
+        // Fallback: Web Share Level 1 (URL + text)
+        if (navigator.share) {
+          try {
+            await navigator.share({
+              title: shareTitle,
+              text: shareText,
+              url: shareUrl
+            })
+            return
+          } catch (err) {
+            if (err.name === "AbortError") return
+            console.warn("Standard share failed, falling back to clipboard:", err)
+          }
+        }
+
+        // Fallback: Copy link
+        await copyLinkToClipboard()
+      }
+
+      // QR Modal Controls
+      function openQrModal() {
+        const modal = document.getElementById("qrModalBackdrop")
+        if (modal) {
+          modal.classList.add("active")
+          document.body.style.overflow = "hidden"
+        }
+      }
+
+      function closeQrModal() {
+        const modal = document.getElementById("qrModalBackdrop")
+        if (modal) {
+          modal.classList.remove("active")
+          document.body.style.overflow = ""
+        }
+      }
+
+      // Event Delegation for all share and modal actions
+      document.addEventListener("click", (e) => {
+        const shareBtn = e.target.closest('[data-action="share-profile"]')
+        if (shareBtn) {
+          e.preventDefault()
+          shareProfile()
+          return
+        }
+
+        const openQrBtn = e.target.closest('[data-action="open-qr-modal"]')
+        if (openQrBtn) {
+          e.preventDefault()
+          openQrModal()
+          return
+        }
+
+        const closeQrBtn = e.target.closest('[data-action="close-qr-modal"]')
+        if (closeQrBtn) {
+          e.preventDefault()
+          closeQrModal()
+          return
+        }
+
+        // Click outside modal to close
+        if (e.target.classList && e.target.classList.contains("qr-modal-backdrop")) {
+          closeQrModal()
+          return
+        }
+
+        const copyLinkBtn = e.target.closest('[data-action="copy-link"]')
+        if (copyLinkBtn) {
+          e.preventDefault()
+          copyLinkToClipboard()
+          return
+        }
+      })
+
+      // Keyboard accessibility (Escape to close, Enter/Space for accessible role=button)
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeQrModal()
+        }
+        if ((e.key === "Enter" || e.key === " ") && e.target.getAttribute("data-action") === "open-qr-modal") {
+          e.preventDefault()
+          openQrModal()
+        }
+      })
 
       async function init() {
         try {
