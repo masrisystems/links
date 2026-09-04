@@ -359,8 +359,6 @@
           <a
             class="button button-default"
             href="hub.html"
-            target="_blank"
-            rel="noopener"
             role="button"
             aria-label="Explore Services & Agency Hub"
           >
@@ -601,8 +599,10 @@
             if (section.buttons && Array.isArray(section.buttons)) {
               section.buttons.forEach((btn) => {
                 if (btn.active !== false) {
+                  const isExternal = btn.link.startsWith("http")
+                  const targetAttr = isExternal ? 'target="_blank" rel="noopener"' : ""
                   buttonsHtml += `
-                                <a class="button ${btn.class}" href="${btn.link}" target="_blank" rel="noopener" role="button" style="animation-delay: ${delay.toFixed(2)}s" aria-label="${btn.aria_label}">
+                                <a class="button ${btn.class}" href="${btn.link}" ${targetAttr} role="button" style="animation-delay: ${delay.toFixed(2)}s" aria-label="${btn.aria_label}">
                                     <img class="icon" aria-hidden="true" src="${btn.logo}" alt="" width="19" height="19">${btn.name}
                                 </a>
                             `

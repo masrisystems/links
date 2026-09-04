@@ -285,6 +285,16 @@ body {
   justify-content: flex-start;
 }
 
+.card-top-bar.card-top-bar-hub {
+  justify-content: space-between;
+}
+
+.top-bar-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .top-bar-back-btn {
   display: inline-flex;
   align-items: center;
