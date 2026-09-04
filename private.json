@@ -2,6 +2,8 @@
     "company": {
         "name": "Masri Systems",
         "subtitle": "Oldenburg & Remote · Softwareentwicklung, AI & Webdesign",
+        "subtitle_de": "Oldenburg & Remote · Softwareentwicklung, AI & Webdesign",
+        "subtitle_en": "Oldenburg & Remote · Software Development, AI & Web Design",
         "logo_url": "images/masrisystems-logo-light.webp",
         "background_url": "https://masri.uber.space/images/email/bg2.png"
     },
@@ -61,36 +63,27 @@
         "iban": "",
         "bic": ""
     },
+    "featured_cta": {
+        "name": "Erstgespräch buchen",
+        "name_de": "Erstgespräch buchen",
+        "name_en": "Book a Free Call",
+        "badge": "Kostenlos · 30 Min.",
+        "badge_de": "Kostenlos · 30 Min.",
+        "badge_en": "Free · 30 Min",
+        "link": "https://cal.com/masrisystems-f7j951/30min?duration=30",
+        "class": "button-hero-cta",
+        "logo": "images/icons/calendar.svg",
+        "aria_label": "Kostenloses 30-Minuten-Gespräch via Cal.com buchen",
+        "aria_label_de": "Kostenloses 30-Minuten-Gespräch via Cal.com buchen",
+        "aria_label_en": "Book a free 30-minute call via Cal.com",
+        "active": true
+    },
     "sections": [
         {
             "label": "Zusammenarbeit",
             "label_de": "Zusammenarbeit",
             "label_en": "Work with me",
             "buttons": [
-                {
-                    "name": "GitHub Sponsors",
-                    "name_de": "GitHub Sponsors",
-                    "name_en": "GitHub Sponsors",
-                    "link": "https://github.com/sponsors/Masrisystems",
-                    "class": "button-github",
-                    "logo": "images/icons/heart-sponsor.svg",
-                    "aria_label": "Sponsor me on GitHub",
-                    "aria_label_de": "Masri Systems auf GitHub unterstützen",
-                    "aria_label_en": "Sponsor me on GitHub",
-                    "active": true
-                },
-                {
-                    "name": "Erstgespräch vereinbaren",
-                    "name_de": "Erstgespräch vereinbaren",
-                    "name_en": "Schedule a Call",
-                    "link": "https://cal.com/masrisystems-f7j951/30min?duration=30",
-                    "class": "button-cal",
-                    "logo": "images/icons/calendar.svg",
-                    "aria_label": "Schedule a 30-minute call via Cal.com",
-                    "aria_label_de": "Kostenloses 30-Minuten-Gespräch via Cal.com buchen",
-                    "aria_label_en": "Schedule a 30-minute call via Cal.com",
-                    "active": true
-                },
                 {
                     "name": "Kontaktformular",
                     "name_de": "Kontaktformular",
@@ -101,6 +94,18 @@
                     "aria_label": "Contact Form",
                     "aria_label_de": "Kontaktformular auf masrisystems.com öffnen",
                     "aria_label_en": "Contact Form",
+                    "active": true
+                },
+                {
+                    "name": "GitHub Sponsors",
+                    "name_de": "GitHub Sponsors",
+                    "name_en": "GitHub Sponsors",
+                    "link": "https://github.com/sponsors/Masrisystems",
+                    "class": "button-github",
+                    "logo": "images/icons/heart-sponsor.svg",
+                    "aria_label": "Sponsor me on GitHub",
+                    "aria_label_de": "Masri Systems auf GitHub unterstützen",
+                    "aria_label_en": "Sponsor me on GitHub",
                     "active": true
                 },
                 {

@@ -263,41 +263,34 @@
           role="navigation"
           aria-label="Social and business links"
         >
-          <span class="section-label" aria-hidden="true">Zusammenarbeit</span>
+          <!-- Primary Hero Call-to-Action: Book a Call -->
           <a
-            class="button button-github"
-            href="https://github.com/sponsors/Masrisystems"
-            target="_blank"
-            rel="noopener"
-            role="button"
-            aria-label="Masri Systems auf GitHub unterstützen"
-          >
-            <img
-              class="icon"
-              aria-hidden="true"
-              src="images/icons/heart-sponsor.svg"
-              alt=""
-              width="19"
-              height="19"
-            />GitHub Sponsors
-          </a>
-          <a
-            class="button button-cal"
+            class="button button-hero-cta"
+            id="heroCtaBtn"
             href="https://cal.com/masrisystems-f7j951/30min?duration=30"
             target="_blank"
             rel="noopener"
             role="button"
             aria-label="Kostenloses 30-Minuten-Gespräch via Cal.com buchen"
           >
-            <img
-              class="icon"
-              aria-hidden="true"
-              src="images/icons/calendar.svg"
-              alt=""
-              width="19"
-              height="19"
-            />Erstgespräch vereinbaren
+            <span class="hero-cta-main">
+              <img
+                class="icon"
+                aria-hidden="true"
+                src="images/icons/calendar.svg"
+                alt=""
+                width="22"
+                height="22"
+              />
+              <span class="hero-cta-title" id="heroCtaTitle">Erstgespräch buchen</span>
+            </span>
+            <span class="hero-cta-badge" id="heroCtaBadge">Kostenlos · 30 Min.</span>
           </a>
+
+          <div class="button-group-separator"></div>
+
+          <!-- Section 1 -->
+          <span class="section-label" aria-hidden="true">Zusammenarbeit</span>
           <a
             class="button button-default"
             href="https://masrisystems.com/contact"
@@ -314,6 +307,23 @@
               width="19"
               height="19"
             />Kontaktformular
+          </a>
+          <a
+            class="button button-github"
+            href="https://github.com/sponsors/Masrisystems"
+            target="_blank"
+            rel="noopener"
+            role="button"
+            aria-label="Masri Systems auf GitHub unterstützen"
+          >
+            <img
+              class="icon"
+              aria-hidden="true"
+              src="images/icons/heart-sponsor.svg"
+              alt=""
+              width="19"
+              height="19"
+            />GitHub Sponsors
           </a>
           <a
             class="button button-kleinanzeigen"
@@ -607,7 +617,10 @@
           qrCopyLink: "Link kopieren",
           linkCopied: "Link in die Zwischenablage kopiert!",
           shareTitle: "Masri Systems — Links",
-          shareText: "Masri Systems — Oldenburg & Remote · Softwareentwicklung, AI & Webdesign:\n"
+          shareText: "Masri Systems — Oldenburg & Remote · Softwareentwicklung, AI & Webdesign:\n",
+          heroCtaTitle: "Erstgespräch buchen",
+          heroCtaBadge: "Kostenlos · 30 Min.",
+          heroCtaAria: "Kostenloses 30-Minuten-Gespräch via Cal.com buchen"
         },
         en: {
           langCode: "en",
@@ -636,7 +649,10 @@
           qrCopyLink: "Copy Link",
           linkCopied: "Link copied to clipboard!",
           shareTitle: "Masri Systems — Links",
-          shareText: "Connect with Masri Systems — Oldenburg & Remote · Softwareentwicklung, AI & Webdesign:\n"
+          shareText: "Connect with Masri Systems — Oldenburg & Remote · Softwareentwicklung, AI & Webdesign:\n",
+          heroCtaTitle: "Book a Free Call",
+          heroCtaBadge: "Free · 30 Min",
+          heroCtaAria: "Book a free 30-minute call via Cal.com"
         }
       }
 
@@ -684,6 +700,15 @@
 
         const qrCopyLink = document.getElementById("qrCopyLinkText")
         if (qrCopyLink) qrCopyLink.textContent = t.qrCopyLink
+
+        const heroCtaTitle = document.getElementById("heroCtaTitle")
+        if (heroCtaTitle) heroCtaTitle.textContent = t.heroCtaTitle
+
+        const heroCtaBadge = document.getElementById("heroCtaBadge")
+        if (heroCtaBadge) heroCtaBadge.textContent = t.heroCtaBadge
+
+        const heroCtaBtn = document.getElementById("heroCtaBtn")
+        if (heroCtaBtn) heroCtaBtn.setAttribute("aria-label", t.heroCtaAria)
       }
 
       function toggleLanguage() {
@@ -711,8 +736,50 @@
           document.body.style.backgroundImage = `url('${profile.company.background_url}')`
         }
 
-        // Generate buttons dynamic HTML
         let delay = 0.05
+
+        // Featured Hero CTA (Book a Call)
+        let heroCtaHtml = ""
+        if (profile.featured_cta && profile.featured_cta.active !== false) {
+          const cta = profile.featured_cta
+          const title = cta["name_" + currentLang] || cta.name || t.heroCtaTitle
+          const badge = cta["badge_" + currentLang] || cta.badge || t.heroCtaBadge
+          const aria = cta["aria_label_" + currentLang] || cta.aria_label || t.heroCtaAria
+          const link = cta.link || "https://cal.com/masrisystems-f7j951/30min?duration=30"
+          const logo = cta.logo || "images/icons/calendar.svg"
+          const cls = cta.class || "button-hero-cta"
+
+          heroCtaHtml = `
+            <!-- Primary Hero Call-to-Action: Book a Call -->
+            <a
+              class="button ${cls}"
+              id="heroCtaBtn"
+              href="${link}"
+              target="_blank"
+              rel="noopener"
+              role="button"
+              aria-label="${aria}"
+              style="animation-delay: ${delay.toFixed(2)}s"
+            >
+              <span class="hero-cta-main">
+                <img
+                  class="icon"
+                  aria-hidden="true"
+                  src="${logo}"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
+                <span class="hero-cta-title" id="heroCtaTitle">${title}</span>
+              </span>
+              <span class="hero-cta-badge" id="heroCtaBadge">${badge}</span>
+            </a>
+            <div class="button-group-separator"></div>
+          `
+          delay += 0.05
+        }
+
+        // Generate buttons dynamic HTML
         let buttonsHtml = ""
         if (profile.sections && Array.isArray(profile.sections)) {
           profile.sections.forEach((section, sIndex) => {
@@ -802,7 +869,7 @@
             <hr class="divider" aria-hidden="true">
 
             <nav class="button-stack" id="links" role="navigation" aria-label="Social and business links">
-                ${buttonsHtml}
+                ${heroCtaHtml}${buttonsHtml}
             </nav>
 
             <section class="trust-section" aria-label="Experience highlights">
@@ -927,32 +994,27 @@
                 aria_label: "WhatsApp Chat",
               },
             ],
+            featured_cta: {
+              name: "Erstgespräch buchen",
+              name_de: "Erstgespräch buchen",
+              name_en: "Book a Free Call",
+              badge: "Kostenlos · 30 Min.",
+              badge_de: "Kostenlos · 30 Min.",
+              badge_en: "Free · 30 Min",
+              link: "https://cal.com/masrisystems-f7j951/30min?duration=30",
+              class: "button-hero-cta",
+              logo: "images/icons/calendar.svg",
+              aria_label: "Kostenloses 30-Minuten-Gespräch via Cal.com buchen",
+              aria_label_de: "Kostenloses 30-Minuten-Gespräch via Cal.com buchen",
+              aria_label_en: "Book a free 30-minute call via Cal.com",
+              active: true,
+            },
             sections: [
               {
                 label: "Zusammenarbeit",
                 label_de: "Zusammenarbeit",
                 label_en: "Work with me",
                 buttons: [
-                  {
-                    name: "GitHub Sponsors",
-                    name_de: "GitHub Sponsors",
-                    name_en: "GitHub Sponsors",
-                    link: "https://github.com/sponsors/Masrisystems",
-                    class: "button-github",
-                    logo: "images/icons/heart-sponsor.svg",
-                    aria_label: "Sponsor me on GitHub",
-                    active: true,
-                  },
-                  {
-                    name: "Erstgespräch vereinbaren",
-                    name_de: "Erstgespräch vereinbaren",
-                    name_en: "Schedule a Call",
-                    link: "https://cal.com/masrisystems-f7j951/30min?duration=30",
-                    class: "button-cal",
-                    logo: "images/icons/calendar.svg",
-                    aria_label: "Schedule a 30-minute call via Cal.com",
-                    active: true,
-                  },
                   {
                     name: "Kontaktformular",
                     name_de: "Kontaktformular",
@@ -961,6 +1023,32 @@
                     class: "button-default",
                     logo: "images/icons/contact.svg",
                     aria_label: "Contact Form",
+                    aria_label_de: "Kontaktformular auf masrisystems.com öffnen",
+                    aria_label_en: "Contact Form",
+                    active: true,
+                  },
+                  {
+                    name: "GitHub Sponsors",
+                    name_de: "GitHub Sponsors",
+                    name_en: "GitHub Sponsors",
+                    link: "https://github.com/sponsors/Masrisystems",
+                    class: "button-github",
+                    logo: "images/icons/heart-sponsor.svg",
+                    aria_label: "Sponsor me on GitHub",
+                    aria_label_de: "Masri Systems auf GitHub unterstützen",
+                    aria_label_en: "Sponsor me on GitHub",
+                    active: true,
+                  },
+                  {
+                    name: "Kleinanzeigen Pro",
+                    name_de: "Kleinanzeigen Pro",
+                    name_en: "Kleinanzeigen Pro",
+                    link: "https://www.kleinanzeigen.de/pro/masrisystems",
+                    class: "button-kleinanzeigen",
+                    logo: "images/icons/kleinanzeigen.svg",
+                    aria_label: "Kleinanzeigen Pro",
+                    aria_label_de: "Masri Systems auf Kleinanzeigen Pro",
+                    aria_label_en: "Masri Systems on Kleinanzeigen Pro",
                     active: true,
                   },
                 ],

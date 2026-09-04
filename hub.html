@@ -210,14 +210,18 @@
           <!-- Section 1 -->
           <span class="section-label" aria-hidden="true">High-Impact Conversion</span>
           <a
-            class="button button-cal"
+            class="button button-hero-cta"
             href="https://cal.com/masrisystems-f7j951/30min?duration=30"
             target="_blank"
             rel="noopener"
             role="button"
-            aria-label="Book a Free 30-Minute Discovery Call"
+            aria-label="Kostenloses 30-Minuten-Erstgespräch buchen"
           >
-            <img class="icon" aria-hidden="true" src="images/icons/calendar.svg" alt="" width="19" height="19" />Book a Free 30-Min Discovery Call
+            <span class="hero-cta-main">
+              <img class="icon" aria-hidden="true" src="images/icons/calendar.svg" alt="" width="22" height="22" />
+              <span class="hero-cta-title">Erstgespräch buchen</span>
+            </span>
+            <span class="hero-cta-badge">Kostenlos · 30 Min.</span>
           </a>
           <a
             class="button button-default"
@@ -704,9 +708,23 @@
                 if (btn.active !== false) {
                   const btnName = btn["name_" + currentLang] || btn.name
                   const btnAria = btn["aria_label_" + currentLang] || btn.aria_label || btnName
+                  const isHeroCta = btn.class && btn.class.includes("button-hero-cta")
+                  const badgeText = btn["badge_" + currentLang] || btn.badge
+                  const badgeHtml = badgeText ? `<span class="hero-cta-badge">${badgeText}</span>` : ""
+
+                  const contentHtml = isHeroCta
+                    ? `
+                      <span class="hero-cta-main">
+                        <img class="icon" aria-hidden="true" src="${btn.logo}" alt="" width="22" height="22" />
+                        <span class="hero-cta-title">${btnName}</span>
+                      </span>
+                      ${badgeHtml}
+                    `
+                    : `<img class="icon" aria-hidden="true" src="${btn.logo}" alt="" width="19" height="19">${btnName}`
+
                   buttonsHtml += `
                     <a class="button ${btn.class}" href="${btn.link}" target="_blank" rel="noopener" role="button" style="animation-delay: ${delay.toFixed(2)}s" aria-label="${btnAria}">
-                      <img class="icon" aria-hidden="true" src="${btn.logo}" alt="" width="19" height="19">${btnName}
+                      ${contentHtml}
                     </a>
                   `
                   delay += 0.04

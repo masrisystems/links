@@ -766,6 +766,112 @@ body {
   outline-offset: 2px;
 }
 
+/* ── Hero / Primary Call-to-Action Button ───────── */
+.button.button-hero-cta {
+  min-height: 56px;
+  padding: 0.85rem 1rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #cc785c 0%, #b85d41 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  color: #ffffff !important;
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 22px rgba(204, 120, 92, 0.42), 0 0 0 1px rgba(204, 120, 92, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button.button-hero-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.22),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: heroShine 4.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes heroShine {
+  0%, 75% {
+    left: -100%;
+  }
+  100% {
+    left: 180%;
+  }
+}
+
+.button.button-hero-cta:hover,
+.button.button-hero-cta:focus-visible {
+  filter: brightness(1.08);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(204, 120, 92, 0.58), 0 0 0 1px rgba(255, 255, 255, 0.45);
+  color: #ffffff !important;
+}
+
+.button.button-hero-cta .hero-cta-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+}
+
+.button.button-hero-cta .icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: 0;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+}
+
+.button.button-hero-cta .hero-cta-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.98rem;
+  letter-spacing: -0.01em;
+}
+
+.button.button-hero-cta .hero-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 370px) {
+  .button.button-hero-cta {
+    font-size: 0.925rem;
+    padding: 0.75rem 0.85rem;
+  }
+  .button.button-hero-cta .hero-cta-badge {
+    display: none;
+  }
+}
+
 /* ── Button Group Separator ─────────────────────── */
 .button-group-separator {
   height: var(--spacing-sm);

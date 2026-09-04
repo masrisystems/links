@@ -4,6 +4,8 @@
         "verified": true,
         "tagline": "Rich in features, not in pricing.",
         "location": "Oldenburg & Remote · Softwareentwicklung, AI & Webdesign",
+        "location_de": "Oldenburg & Remote · Softwareentwicklung, AI & Webdesign",
+        "location_en": "Oldenburg & Remote · Software Development, AI & Web Design",
         "logo_url": "images/masrisystems-logo-light.webp",
         "background_url": "https://masri.uber.space/images/email/bg2.png"
     },
@@ -58,13 +60,16 @@
             "label_en": "High-Impact Conversion",
             "buttons": [
                 {
-                    "name": "Kostenloses 30-Min. Erstgespräch buchen",
-                    "name_de": "Kostenloses 30-Min. Erstgespräch buchen",
-                    "name_en": "Book a Free 30-Min Discovery Call",
+                    "name": "Erstgespräch buchen",
+                    "name_de": "Erstgespräch buchen",
+                    "name_en": "Book a Free Discovery Call",
+                    "badge": "Kostenlos · 30 Min.",
+                    "badge_de": "Kostenlos · 30 Min.",
+                    "badge_en": "Free · 30 Min",
                     "link": "https://cal.com/masrisystems-f7j951/30min?duration=30",
-                    "class": "button-cal",
+                    "class": "button-hero-cta",
                     "logo": "images/icons/calendar.svg",
-                    "aria_label": "Book a Free 30-Minute Discovery Call",
+                    "aria_label": "Kostenloses 30-Minuten-Erstgespräch buchen",
                     "aria_label_de": "Kostenloses 30-Minuten-Erstgespräch buchen",
                     "aria_label_en": "Book a Free 30-Minute Discovery Call",
                     "active": true
