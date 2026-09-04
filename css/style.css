@@ -281,6 +281,47 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.card-top-bar.card-top-bar-back {
+  justify-content: flex-start;
+}
+
+.top-bar-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  padding: 0.35rem 0.85rem 0.35rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.top-bar-back-btn:hover,
+.top-bar-back-btn:focus-visible {
+  color: var(--color-text);
+  background: rgba(204, 120, 92, 0.15);
+  border-color: rgba(204, 120, 92, 0.4);
+  transform: translateX(-2px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.top-bar-back-btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.top-bar-back-btn:hover svg {
+  transform: translateX(-2px);
+}
+
 .top-bar-btn {
   display: inline-flex;
   align-items: center;
@@ -415,6 +456,15 @@ body {
   flex-wrap: wrap;
 }
 
+.qr-invite-actions .button-action {
+  flex: 1 1 110px;
+  width: 100%;
+  min-height: 38px;
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
 .button-action {
   display: inline-flex;
   align-items: center;
@@ -435,8 +485,6 @@ body {
   background: var(--color-primary);
   color: #ffffff;
   box-shadow: 0 2px 8px rgba(204, 120, 92, 0.35);
-  flex: 1;
-  min-width: 110px;
 }
 
 .button-share-main:hover,
