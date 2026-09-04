@@ -3,7 +3,7 @@
         "name": "Masri Systems",
         "verified": true,
         "tagline": "Rich in features, not in pricing.",
-        "location": "📍 Oldenburg & Remote · Softwareentwicklung, AI & Webdesign",
+        "location": "Oldenburg & Remote · Softwareentwicklung, AI & Webdesign",
         "logo_url": "images/masrisystems-logo-light.webp",
         "background_url": "https://masri.uber.space/images/email/bg2.png"
     },
@@ -48,7 +48,7 @@
     ],
     "sections": [
         {
-            "label": "🚀 High-Impact Conversion",
+            "label": "High-Impact Conversion",
             "buttons": [
                 {
                     "name": "Book a Free 30-Min Discovery Call",
@@ -85,10 +85,10 @@
             ]
         },
         {
-            "label": "📍 Local Presence & Verified Reviews",
+            "label": "Local Presence & Verified Reviews",
             "buttons": [
                 {
-                    "name": "Leave a Google Review (5.0 ★)",
+                    "name": "Leave a Google Review (5.0)",
                     "link": "https://g.page/r/CQl3_s6R1DkiEAE/review",
                     "class": "button-google",
                     "logo": "images/icons/google.svg",
@@ -106,7 +106,7 @@
             ]
         },
         {
-            "label": "💻 Core Services & Solutions",
+            "label": "Core Services & Solutions",
             "buttons": [
                 {
                     "name": "Custom Software & Web Apps (VILT Stack)",
@@ -151,7 +151,7 @@
             ]
         },
         {
-            "label": "🧠 Authority & Engineering Footprint",
+            "label": "Authority & Engineering Footprint",
             "buttons": [
                 {
                     "name": "Tech Blog & Brain Vault",
