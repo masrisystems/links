@@ -53,141 +53,209 @@
     ],
     "sections": [
         {
-            "label": "High-Impact Conversion",
+            "label": "Direkter Kontakt & Anfrage",
+            "label_de": "Direkter Kontakt & Anfrage",
+            "label_en": "High-Impact Conversion",
             "buttons": [
                 {
-                    "name": "Book a Free 30-Min Discovery Call",
+                    "name": "Kostenloses 30-Min. Erstgespräch buchen",
+                    "name_de": "Kostenloses 30-Min. Erstgespräch buchen",
+                    "name_en": "Book a Free 30-Min Discovery Call",
                     "link": "https://cal.com/masrisystems-f7j951/30min?duration=30",
                     "class": "button-cal",
                     "logo": "images/icons/calendar.svg",
                     "aria_label": "Book a Free 30-Minute Discovery Call",
+                    "aria_label_de": "Kostenloses 30-Minuten-Erstgespräch buchen",
+                    "aria_label_en": "Book a Free 30-Minute Discovery Call",
                     "active": true
                 },
                 {
-                    "name": "2-Minute Project Cost Estimator",
+                    "name": "2-Minuten Projektkosten-Rechner",
+                    "name_de": "2-Minuten Projektkosten-Rechner",
+                    "name_en": "2-Minute Project Cost Estimator",
                     "link": "https://masrisystems.com/pricing",
                     "class": "button-default",
                     "logo": "images/icons/calculator.svg",
                     "aria_label": "Instant Project Cost Estimator",
+                    "aria_label_de": "Projektkosten in 2 Minuten online kalkulieren",
+                    "aria_label_en": "Instant Project Cost Estimator",
                     "active": true
                 },
                 {
-                    "name": "Official Website & Flagship",
+                    "name": "Offizielle Webseite & Flagship",
+                    "name_de": "Offizielle Webseite & Flagship",
+                    "name_en": "Official Website & Flagship",
                     "link": "https://masrisystems.com/",
                     "class": "button-default",
                     "logo": "images/icons/globe.svg",
                     "aria_label": "Visit Masri Systems Official Website",
+                    "aria_label_de": "Offizielle Masri Systems Webseite besuchen",
+                    "aria_label_en": "Visit Masri Systems Official Website",
                     "active": true
                 },
                 {
                     "name": "Kleinanzeigen Pro Service-Shop",
+                    "name_de": "Kleinanzeigen Pro Service-Shop",
+                    "name_en": "Kleinanzeigen Pro Service-Shop",
                     "link": "https://www.kleinanzeigen.de/pro/masrisystems",
                     "class": "button-kleinanzeigen",
                     "logo": "images/icons/kleinanzeigen.svg",
                     "aria_label": "Masri Systems auf Kleinanzeigen Pro",
+                    "aria_label_de": "Masri Systems auf Kleinanzeigen Pro",
+                    "aria_label_en": "Masri Systems on Kleinanzeigen Pro",
                     "active": true
                 }
             ]
         },
         {
-            "label": "Local Presence & Verified Reviews",
+            "label": "Standort & Verifizierte Bewertungen",
+            "label_de": "Standort & Verifizierte Bewertungen",
+            "label_en": "Local Presence & Verified Reviews",
             "buttons": [
                 {
-                    "name": "Leave a Google Review (5.0)",
+                    "name": "Google-Bewertung schreiben (5.0 ★)",
+                    "name_de": "Google-Bewertung schreiben (5.0 ★)",
+                    "name_en": "Leave a Google Review (5.0 ★)",
                     "link": "https://g.page/r/CQl3_s6R1DkiEAE/review",
                     "class": "button-google",
                     "logo": "images/icons/google.svg",
                     "aria_label": "Leave a 5.0 Star Google Review",
+                    "aria_label_de": "5-Sterne Google-Bewertung abgeben",
+                    "aria_label_en": "Leave a 5.0 Star Google Review",
                     "active": true
                 },
                 {
-                    "name": "Find Us on Google Maps",
+                    "name": "Standort auf Google Maps finden",
+                    "name_de": "Standort auf Google Maps finden",
+                    "name_en": "Find Us on Google Maps",
                     "link": "https://www.google.com/maps?cid=2466235993670186761",
                     "class": "button-google",
                     "logo": "images/icons/generic-map.svg",
                     "aria_label": "Find Masri Systems on Google Maps",
+                    "aria_label_de": "Masri Systems auf Google Maps ansehen",
+                    "aria_label_en": "Find Masri Systems on Google Maps",
                     "active": true
                 }
             ]
         },
         {
-            "label": "Core Services & Solutions",
+            "label": "Kernleistungen & Lösungen",
+            "label_de": "Kernleistungen & Lösungen",
+            "label_en": "Core Services & Solutions",
             "buttons": [
                 {
-                    "name": "Custom Software & Web Apps (VILT Stack)",
+                    "name": "Individuelle Software & Web-Apps (VILT Stack)",
+                    "name_de": "Individuelle Software & Web-Apps (VILT Stack)",
+                    "name_en": "Custom Software & Web Apps (VILT Stack)",
                     "link": "https://masrisystems.com/services/software-development",
                     "class": "button-default",
                     "logo": "images/icons/code.svg",
                     "aria_label": "Custom Software & Web Application Development",
+                    "aria_label_de": "Individuelle Software- & Webapplikations-Entwicklung",
+                    "aria_label_en": "Custom Software & Web Application Development",
                     "active": true
                 },
                 {
                     "name": "High-Performance Webdesign (<0.8s LCP)",
+                    "name_de": "High-Performance Webdesign (<0.8s LCP)",
+                    "name_en": "High-Performance Webdesign (<0.8s LCP)",
                     "link": "https://masrisystems.com/services/website-design",
                     "class": "button-default",
                     "logo": "images/icons/layout.svg",
                     "aria_label": "Modern High-Performance Webdesign",
+                    "aria_label_de": "Modernes High-Performance Webdesign",
+                    "aria_label_en": "Modern High-Performance Webdesign",
                     "active": true
                 },
                 {
-                    "name": "AI Agents & Workflow Automation",
+                    "name": "KI-Agenten & Workflow-Automatisierung",
+                    "name_de": "KI-Agenten & Workflow-Automatisierung",
+                    "name_en": "AI Agents & Workflow Automation",
                     "link": "https://masrisystems.com/automation",
                     "class": "button-default",
                     "logo": "images/icons/bot.svg",
                     "aria_label": "AI Agents and Workflow Automation",
+                    "aria_label_de": "KI-Agenten & Prozessautomatisierung",
+                    "aria_label_en": "AI Agents and Workflow Automation",
                     "active": true
                 },
                 {
-                    "name": "Headless E-Commerce & Online Stores",
+                    "name": "Headless E-Commerce & Onlineshops",
+                    "name_de": "Headless E-Commerce & Onlineshops",
+                    "name_en": "Headless E-Commerce & Online Stores",
                     "link": "https://masrisystems.com/services/ecommerce-development",
                     "class": "button-default",
                     "logo": "images/icons/shopping-bag.svg",
                     "aria_label": "Headless E-Commerce & Online Shops",
+                    "aria_label_de": "Headless E-Commerce & Onlineshops",
+                    "aria_label_en": "Headless E-Commerce & Online Shops",
                     "active": true
                 },
                 {
-                    "name": "Mobile App Development (iOS & Android)",
+                    "name": "Mobile App-Entwicklung (iOS & Android)",
+                    "name_de": "Mobile App-Entwicklung (iOS & Android)",
+                    "name_en": "Mobile App Development (iOS & Android)",
                     "link": "https://masrisystems.com/services/mobile-applications",
                     "class": "button-default",
                     "logo": "images/icons/smartphone.svg",
                     "aria_label": "Mobile App Development for iOS and Android",
+                    "aria_label_de": "Mobile App-Entwicklung für iOS und Android",
+                    "aria_label_en": "Mobile App Development for iOS and Android",
                     "active": true
                 }
             ]
         },
         {
-            "label": "Authority & Engineering Footprint",
+            "label": "Expertise, Projekte & Open Source",
+            "label_de": "Expertise, Projekte & Open Source",
+            "label_en": "Authority & Engineering Footprint",
             "buttons": [
                 {
-                    "name": "Tech Blog & Brain Vault",
+                    "name": "Tech-Blog & Knowledge Base",
+                    "name_de": "Tech-Blog & Knowledge Base",
+                    "name_en": "Tech Blog & Brain Vault",
                     "link": "https://masrisystems.com/brain",
                     "class": "button-default",
                     "logo": "images/icons/blog.svg",
                     "aria_label": "Tech Blog and Knowledge Brain",
+                    "aria_label_de": "Tech-Blog und Wissensdatenbank",
+                    "aria_label_en": "Tech Blog and Knowledge Brain",
                     "active": true
                 },
                 {
-                    "name": "Founder Resume & Portfolio",
+                    "name": "Interaktiver Lebenslauf & Portfolio",
+                    "name_de": "Interaktiver Lebenslauf & Portfolio",
+                    "name_en": "Founder Resume & Portfolio",
                     "link": "https://resume.masrisystems.com/",
                     "class": "button-resume",
                     "logo": "images/icons/resume.svg",
                     "aria_label": "Founder Interactive Resume",
+                    "aria_label_de": "Interaktiver Lebenslauf des Gründers",
+                    "aria_label_en": "Founder Interactive Resume",
                     "active": true
                 },
                 {
-                    "name": "Open Source GitHub Repositories",
+                    "name": "Open-Source GitHub Repositories",
+                    "name_de": "Open-Source GitHub Repositories",
+                    "name_en": "Open Source GitHub Repositories",
                     "link": "https://github.com/masrisystems",
                     "class": "button-github",
                     "logo": "images/icons/github.svg",
                     "aria_label": "Open Source Repositories on GitHub",
+                    "aria_label_de": "Open-Source-Repositories auf GitHub",
+                    "aria_label_en": "Open Source Repositories on GitHub",
                     "active": true
                 },
                 {
-                    "name": "Omnivault AI Obsidian Template",
+                    "name": "Omnivault AI Obsidian-Vorlage",
+                    "name_de": "Omnivault AI Obsidian-Vorlage",
+                    "name_en": "Omnivault AI Obsidian Template",
                     "link": "https://omnivault.masrisystems.com/",
                     "class": "button-obsidian",
                     "logo": "images/icons/obsidian.svg",
                     "aria_label": "Omnivault AI Obsidian Template",
+                    "aria_label_de": "Omnivault AI Obsidian-Vorlage entdecken",
+                    "aria_label_en": "Omnivault AI Obsidian Template",
                     "active": true
                 }
             ]

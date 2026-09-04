@@ -181,7 +181,7 @@ body {
   display: inline-block;
   vertical-align: middle;
   margin-left: 4px;
-  color: #38bdf8;
+  flex-shrink: 0;
 }
 
 /* ── Social Quick Links Row ──────────────────────── */
@@ -359,6 +359,19 @@ body {
 .top-bar-btn svg {
   width: 14px;
   height: 14px;
+}
+
+.lang-toggle-btn {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.6rem;
+}
+
+.lang-toggle-btn .lang-indicator {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
 }
 
 /* ── QR Invite Section ──────────────────────────── */
