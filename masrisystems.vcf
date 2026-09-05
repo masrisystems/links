@@ -1,0 +1,20 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Masri Systems//EN
+N:Masri;Mohamad;;;
+FN:Mohamad Masri
+ORG:Masri Systems
+TITLE:Founder & Lead Systems Engineer · Softwareentwicklung, AI & Webdesign
+EMAIL;type=INTERNET;type=WORK;type=pref:hallo@masrisystems.com
+TEL;type=WORK;type=CELL;type=VOICE;type=pref:+4917631579669
+ADR;type=WORK;type=pref:;;Nettelbeckstraße;Oldenburg;Niedersachsen;26131;Deutschland
+GEO:53.140118;8.188813
+URL;type=WORK;type=pref:https://masrisystems.com/
+URL;type=Links:https://links.masrisystems.com/
+URL;type=Calendar:https://cal.com/masrisystems-f7j951/30min?duration=30
+URL;type=GitHub:https://github.com/masrisystems
+URL;type=LinkedIn:https://www.linkedin.com/company/masri-systems
+URL;type=Kleinanzeigen:https://www.kleinanzeigen.de/pro/masrisystems
+URL;type=Instagram:https://www.instagram.com/masrisystems/
+NOTE:Masri Systems — Oldenburg & Remote. Softwareentwicklung, AI & Webdesign. Termine: https://cal.com/masrisystems-f7j951/30min | Tel: +49 176 31579669 | Mail: hallo@masrisystems.com
+END:VCARD

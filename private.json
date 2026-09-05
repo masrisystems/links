@@ -12,7 +12,14 @@
         "city": "26131 Oldenburg",
         "phone_display": "+49 (176) 31579669",
         "phone_link": "+4917631579669",
-        "email": "hallo@masrisystems.com"
+        "email": "hallo@masrisystems.com",
+        "vcard_button": {
+            "name": "Kontakt speichern",
+            "name_de": "Kontakt speichern",
+            "name_en": "Save Contact",
+            "badge": ".vcf",
+            "active": true
+        }
     },
     "quick_socials": [
         {
@@ -35,13 +42,6 @@
             "class": "quick-instagram",
             "logo": "images/icons/instagram.svg",
             "aria_label": "Instagram Profile"
-        },
-        {
-            "name": "Facebook",
-            "link": "https://www.facebook.com/profile.php?id=61582289406696",
-            "class": "quick-facebook",
-            "logo": "images/icons/facebook.svg",
-            "aria_label": "Facebook Page"
         },
         {
             "name": "WhatsApp",
@@ -80,6 +80,61 @@
     },
     "sections": [
         {
+            "label": "Entdecken",
+            "label_de": "Entdecken",
+            "label_en": "Explore",
+            "buttons": [
+                {
+                    "name": "Lebenslauf",
+                    "name_de": "Lebenslauf",
+                    "name_en": "Resume",
+                    "link": "https://resume.masrisystems.com/",
+                    "class": "button-resume",
+                    "logo": "images/icons/resume.svg",
+                    "aria_label": "Visit my resume at resume.masrisystems.com",
+                    "aria_label_de": "Lebenslauf auf resume.masrisystems.com ansehen",
+                    "aria_label_en": "Visit my resume at resume.masrisystems.com",
+                    "active": true
+                },
+                {
+                    "name": "Projekte",
+                    "name_de": "Projekte",
+                    "name_en": "Projects",
+                    "link": "https://masrisystems.com/brain/projects/",
+                    "class": "button-default",
+                    "logo": "images/icons/projects.svg",
+                    "aria_label": "Explore digital flagships and client projects",
+                    "aria_label_de": "Digitale Flaggschiffe & Kundenprojekte ansehen",
+                    "aria_label_en": "Explore digital flagships and client projects",
+                    "active": true
+                },
+                {
+                    "name": "Webseite",
+                    "name_de": "Webseite",
+                    "name_en": "Website",
+                    "link": "https://masrisystems.com/",
+                    "class": "button-default",
+                    "logo": "images/icons/globe.svg",
+                    "aria_label": "Visit my website masrisystems.com",
+                    "aria_label_de": "Offizielle Webseite masrisystems.com besuchen",
+                    "aria_label_en": "Visit my website masrisystems.com",
+                    "active": true
+                },
+                {
+                    "name": "Blog",
+                    "name_de": "Blog",
+                    "name_en": "Blog",
+                    "link": "https://masrisystems.com/blog",
+                    "class": "button-default",
+                    "logo": "images/icons/blog.svg",
+                    "aria_label": "Read my blog at masrisystems.com/blog",
+                    "aria_label_de": "Blog auf masrisystems.com/blog lesen",
+                    "aria_label_en": "Read my blog at masrisystems.com/blog",
+                    "active": true
+                }
+            ]
+        },
+        {
             "label": "Zusammenarbeit",
             "label_de": "Zusammenarbeit",
             "label_en": "Work with me",
@@ -94,18 +149,6 @@
                     "aria_label": "Contact Form",
                     "aria_label_de": "Kontaktformular auf masrisystems.com öffnen",
                     "aria_label_en": "Contact Form",
-                    "active": true
-                },
-                {
-                    "name": "GitHub Sponsors",
-                    "name_de": "GitHub Sponsors",
-                    "name_en": "GitHub Sponsors",
-                    "link": "https://github.com/sponsors/Masrisystems",
-                    "class": "button-github",
-                    "logo": "images/icons/heart-sponsor.svg",
-                    "aria_label": "Sponsor me on GitHub",
-                    "aria_label_de": "Masri Systems auf GitHub unterstützen",
-                    "aria_label_en": "Sponsor me on GitHub",
                     "active": true
                 },
                 {
@@ -135,22 +178,30 @@
             ]
         },
         {
-            "label": "Entdecken",
-            "label_de": "Entdecken",
-            "label_en": "Explore",
+            "label": "Bewertungen",
+            "label_de": "Bewertungen",
+            "label_en": "Reviews & Ratings",
             "buttons": [
                 {
-                    "name": "Webseite",
-                    "name_de": "Webseite",
-                    "name_en": "Website",
-                    "link": "https://masrisystems.com/",
-                    "class": "button-default",
-                    "logo": "images/icons/globe.svg",
-                    "aria_label": "Visit my website masrisystems.com",
-                    "aria_label_de": "Offizielle Webseite masrisystems.com besuchen",
-                    "aria_label_en": "Visit my website masrisystems.com",
+                    "name": "Google-Bewertung schreiben (5.0 ★)",
+                    "name_de": "Google-Bewertung schreiben (5.0 ★)",
+                    "name_en": "Leave a Google Review (5.0 ★)",
+                    "link": "https://g.page/r/CQl3_s6R1DkiEAE/review",
+                    "class": "button-google",
+                    "logo": "images/icons/google.svg",
+                    "aria_label": "Leave a Google review",
+                    "aria_label_de": "Google-Bewertung abgeben",
+                    "aria_label_en": "Leave a Google review",
                     "active": true
-                },
+                }
+            ]
+        },
+        {
+            "label": "Weitere Links & Agentur",
+            "label_de": "Weitere Links & Agentur",
+            "label_en": "More Links & Agency",
+            "collapsed": true,
+            "buttons": [
                 {
                     "name": "Agentur-Hub",
                     "name_de": "Agentur-Hub",
@@ -161,30 +212,6 @@
                     "aria_label": "Explore Services & Agency Hub",
                     "aria_label_de": "Leistungen & Agentur-Hub entdecken",
                     "aria_label_en": "Explore Services & Agency Hub",
-                    "active": true
-                },
-                {
-                    "name": "Projekte",
-                    "name_de": "Projekte",
-                    "name_en": "Projects",
-                    "link": "https://masrisystems.com/brain/projects/",
-                    "class": "button-default",
-                    "logo": "images/icons/projects.svg",
-                    "aria_label": "Explore digital flagships and client projects",
-                    "aria_label_de": "Digitale Flaggschiffe & Kundenprojekte ansehen",
-                    "aria_label_en": "Explore digital flagships and client projects",
-                    "active": true
-                },
-                {
-                    "name": "Blog",
-                    "name_de": "Blog",
-                    "name_en": "Blog",
-                    "link": "https://masrisystems.com/blog",
-                    "class": "button-default",
-                    "logo": "images/icons/blog.svg",
-                    "aria_label": "Read my blog at masrisystems.com/blog",
-                    "aria_label_de": "Blog auf masrisystems.com/blog lesen",
-                    "aria_label_en": "Read my blog at masrisystems.com/blog",
                     "active": true
                 },
                 {
@@ -200,34 +227,27 @@
                     "active": true
                 },
                 {
-                    "name": "Lebenslauf",
-                    "name_de": "Lebenslauf",
-                    "name_en": "Resume",
-                    "link": "https://resume.masrisystems.com/",
-                    "class": "button-resume",
-                    "logo": "images/icons/resume.svg",
-                    "aria_label": "Visit my resume at resume.masrisystems.com",
-                    "aria_label_de": "Lebenslauf auf resume.masrisystems.com ansehen",
-                    "aria_label_en": "Visit my resume at resume.masrisystems.com",
+                    "name": "GitHub Sponsors",
+                    "name_de": "GitHub Sponsors",
+                    "name_en": "GitHub Sponsors",
+                    "link": "https://github.com/sponsors/Masrisystems",
+                    "class": "button-github",
+                    "logo": "images/icons/heart-sponsor.svg",
+                    "aria_label": "Sponsor me on GitHub",
+                    "aria_label_de": "Masri Systems auf GitHub unterstützen",
+                    "aria_label_en": "Sponsor me on GitHub",
                     "active": true
-                }
-            ]
-        },
-        {
-            "label": "Bewertungen",
-            "label_de": "Bewertungen",
-            "label_en": "Reviews & Ratings",
-            "buttons": [
+                },
                 {
-                    "name": "Google-Bewertung schreiben (5.0 ★)",
-                    "name_de": "Google-Bewertung schreiben (5.0 ★)",
-                    "name_en": "Leave a Google Review (5.0 ★)",
-                    "link": "https://g.page/r/CQl3_s6R1DkiEAE/review",
-                    "class": "button-google",
-                    "logo": "images/icons/google.svg",
-                    "aria_label": "Leave a Google review",
-                    "aria_label_de": "Google-Bewertung abgeben",
-                    "aria_label_en": "Leave a Google review",
+                    "name": "Facebook",
+                    "name_de": "Facebook",
+                    "name_en": "Facebook",
+                    "link": "https://www.facebook.com/profile.php?id=61582289406696",
+                    "class": "button-facebook",
+                    "logo": "images/icons/facebook.svg",
+                    "aria_label": "Masri Systems on Facebook",
+                    "aria_label_de": "Masri Systems auf Facebook",
+                    "aria_label_en": "Masri Systems on Facebook",
                     "active": true
                 }
             ]

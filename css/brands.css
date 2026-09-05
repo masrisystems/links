@@ -31,11 +31,19 @@
 /* Brand-Specific Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* Default — Masri Systems Terracotta Brand */
+/* Default — Masri Systems Sleek Dark Glass */
 .button.button-default {
-	--button-text:#ffffff;
-	--button-background:#cc785c;
-	--button-border:1px solid rgba(230, 223, 216, 0.2);
+	--button-text: #faf9f5;
+	--button-background: rgba(36, 33, 30, 0.75);
+	--button-border: 1px solid rgba(230, 223, 216, 0.14);
+}
+
+.button.button-default:hover,
+.button.button-default:focus-visible {
+	--button-text: #ffffff;
+	--button-background: linear-gradient(135deg, rgba(204, 120, 92, 0.22) 0%, rgba(36, 33, 30, 0.92) 100%);
+	--button-border: 1px solid rgba(204, 120, 92, 0.6);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 16px rgba(204, 120, 92, 0.18);
 }
 
 /* Resume — Discreet / Subtle Button */
@@ -220,7 +228,8 @@
 }
 
 /* Facebook */
-.button-faceb {
+.button-faceb,
+.button-facebook {
 	--button-text:#ffffff;
 	--button-background:#0866FF;
 }

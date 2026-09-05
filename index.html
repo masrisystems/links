@@ -68,8 +68,8 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css?v=17" />
-    <link rel="stylesheet" href="css/brands.css?v=3" />
+    <link rel="stylesheet" href="css/style.css?v=18" />
+    <link rel="stylesheet" href="css/brands.css?v=5" />
 
     <!-- FOUC Prevention -->
     <style>
@@ -171,6 +171,10 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
             <span id="topBarQrText">QR-Code</span>
           </button>
+          <button type="button" class="top-bar-btn" data-action="save-vcard" id="saveVcardBtn" aria-label="Visitenkarte als Kontakt speichern (.vcf)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+            <span id="topBarSaveContactText">Kontakt</span>
+          </button>
         </div>
 
         <header class="profile">
@@ -196,7 +200,7 @@
               <polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon>
             </svg>
           </h1>
-          <p class="subtitle">Oldenburg &amp; Remote · Softwareentwicklung, AI &amp; Webdesign</p>
+          <p class="subtitle" id="profileSubtitle">Oldenburg &amp; Remote · Softwareentwicklung, AI &amp; Webdesign</p>
           <div class="contact-info">
             <a href="tel:+4917631579669" aria-label="Call Masri Systems">+49 (176) 31579669</a>
           </div>
@@ -230,15 +234,6 @@
               <img src="images/icons/instagram.svg" alt="Instagram" width="18" height="18" />
             </a>
             <a
-              href="https://www.facebook.com/profile.php?id=61582289406696"
-              target="_blank"
-              rel="noopener"
-              class="social-quick-link quick-facebook"
-              aria-label="Facebook Page"
-            >
-              <img src="images/icons/facebook.svg" alt="Facebook" width="18" height="18" />
-            </a>
-            <a
               href="https://wa.me/4917631579669"
               target="_blank"
               rel="noopener"
@@ -246,6 +241,39 @@
               aria-label="WhatsApp Chat"
             >
               <img src="images/icons/whatsapp.svg" alt="WhatsApp" width="18" height="18" />
+            </a>
+          </div>
+
+          <!-- Prominent Save Contact (vCard) Action Button -->
+          <div class="header-vcard-wrapper">
+            <a
+              href="masrisystems.vcf"
+              download="Masri_Systems_Mohamad_Masri.vcf"
+              class="header-vcard-btn"
+              id="headerSaveContactBtn"
+              data-action="save-vcard"
+              role="button"
+              aria-label="Mohamad Masri als Kontakt im Smartphone speichern (.vcf)"
+            >
+              <svg
+                class="header-vcard-icon"
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <line x1="19" y1="8" x2="19" y2="14"></line>
+                <line x1="22" y1="11" x2="16" y2="11"></line>
+              </svg>
+              <span class="header-vcard-text" id="headerSaveContactText">Kontakt speichern</span>
+              <span class="header-vcard-badge">.vcf</span>
             </a>
           </div>
 
@@ -289,92 +317,24 @@
 
           <div class="button-group-separator"></div>
 
-          <!-- Section 1 -->
-          <span class="section-label" aria-hidden="true">Zusammenarbeit</span>
-          <a
-            class="button button-default"
-            href="https://masrisystems.com/contact"
-            target="_blank"
-            rel="noopener"
-            role="button"
-            aria-label="Kontaktformular auf masrisystems.com öffnen"
-          >
-            <img
-              class="icon"
-              aria-hidden="true"
-              src="images/icons/contact.svg"
-              alt=""
-              width="19"
-              height="19"
-            />Kontaktformular
-          </a>
-          <a
-            class="button button-github"
-            href="https://github.com/sponsors/Masrisystems"
-            target="_blank"
-            rel="noopener"
-            role="button"
-            aria-label="Masri Systems auf GitHub unterstützen"
-          >
-            <img
-              class="icon"
-              aria-hidden="true"
-              src="images/icons/heart-sponsor.svg"
-              alt=""
-              width="19"
-              height="19"
-            />GitHub Sponsors
-          </a>
-          <a
-            class="button button-kleinanzeigen"
-            href="https://www.kleinanzeigen.de/pro/masrisystems"
-            target="_blank"
-            rel="noopener"
-            role="button"
-            aria-label="Masri Systems auf Kleinanzeigen Pro"
-          >
-            <img
-              class="icon"
-              aria-hidden="true"
-              src="images/icons/kleinanzeigen.svg"
-              alt=""
-              width="19"
-              height="19"
-            />Kleinanzeigen Pro
-          </a>
-          <div class="button-group-separator"></div>
+          <!-- Section: Entdecken / Career & Tech -->
           <span class="section-label" aria-hidden="true">Entdecken</span>
           <a
-            class="button button-default"
-            href="https://masrisystems.com/"
+            class="button button-resume"
+            href="https://resume.masrisystems.com/"
             target="_blank"
             rel="noopener"
             role="button"
-            aria-label="Offizielle Webseite masrisystems.com besuchen"
+            aria-label="Lebenslauf auf resume.masrisystems.com ansehen"
           >
             <img
               class="icon"
               aria-hidden="true"
-              src="images/icons/globe.svg"
+              src="images/icons/resume.svg"
               alt=""
               width="19"
               height="19"
-            />Webseite
-          </a>
-          <a
-            class="button button-default"
-            href="hub.html"
-            role="button"
-            aria-label="Leistungen & Agentur-Hub entdecken"
-          >
-            <img
-              class="icon"
-              aria-hidden="true"
-              src="images/icons/hub.svg"
-              alt=""
-              width="19"
-              height="19"
-            />Agentur-Hub
+            /><span class="button-label-group"><span class="button-title">Lebenslauf</span></span><svg class="button-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </a>
           <a
             class="button button-default"
@@ -391,7 +351,24 @@
               alt=""
               width="19"
               height="19"
-            />Projekte
+            /><span class="button-label-group"><span class="button-title">Projekte</span></span><svg class="button-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a
+            class="button button-default"
+            href="https://masrisystems.com/"
+            target="_blank"
+            rel="noopener"
+            role="button"
+            aria-label="Offizielle Webseite masrisystems.com besuchen"
+          >
+            <img
+              class="icon"
+              aria-hidden="true"
+              src="images/icons/globe.svg"
+              alt=""
+              width="19"
+              height="19"
+            /><span class="button-label-group"><span class="button-title">Webseite</span></span><svg class="button-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </a>
           <a
             class="button button-default"
@@ -408,43 +385,51 @@
               alt=""
               width="19"
               height="19"
-            />Blog
+            /><span class="button-label-group"><span class="button-title">Blog</span></span><svg class="button-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </a>
-          <a
-            class="button button-obsidian"
-            href="https://omnivault.masrisystems.com/"
-            target="_blank"
-            rel="noopener"
-            role="button"
-            aria-label="Omnivault AI Obsidian-Vorlage entdecken"
-          >
-            <img
-              class="icon"
-              aria-hidden="true"
-              src="images/icons/obsidian.svg"
-              alt=""
-              width="19"
-              height="19"
-            />Omnivault AI
-          </a>
-          <a
-            class="button button-resume"
-            href="https://resume.masrisystems.com/"
-            target="_blank"
-            rel="noopener"
-            role="button"
-            aria-label="Lebenslauf auf resume.masrisystems.com ansehen"
-          >
-            <img
-              class="icon"
-              aria-hidden="true"
-              src="images/icons/resume.svg"
-              alt=""
-              width="19"
-              height="19"
-            />Lebenslauf
-          </a>
+
           <div class="button-group-separator"></div>
+
+          <!-- Section: Zusammenarbeit -->
+          <span class="section-label" aria-hidden="true">Zusammenarbeit</span>
+          <a
+            class="button button-default"
+            href="https://masrisystems.com/contact"
+            target="_blank"
+            rel="noopener"
+            role="button"
+            aria-label="Kontaktformular auf masrisystems.com öffnen"
+          >
+            <img
+              class="icon"
+              aria-hidden="true"
+              src="images/icons/contact.svg"
+              alt=""
+              width="19"
+              height="19"
+            /><span class="button-label-group"><span class="button-title">Kontaktformular</span></span><svg class="button-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a
+            class="button button-kleinanzeigen"
+            href="https://www.kleinanzeigen.de/pro/masrisystems"
+            target="_blank"
+            rel="noopener"
+            role="button"
+            aria-label="Masri Systems auf Kleinanzeigen Pro"
+          >
+            <img
+              class="icon"
+              aria-hidden="true"
+              src="images/icons/kleinanzeigen.svg"
+              alt=""
+              width="19"
+              height="19"
+            /><span class="button-label-group"><span class="button-title">Kleinanzeigen Pro</span></span><svg class="button-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+
+          <div class="button-group-separator"></div>
+
+          <!-- Section: Bewertungen -->
           <span class="section-label" aria-hidden="true">Bewertungen</span>
           <a
             class="button button-google"
@@ -461,8 +446,88 @@
               alt=""
               width="19"
               height="19"
-            />Google-Bewertung schreiben (5.0 ★)
+            /><span class="button-label-group"><span class="button-title">Google-Bewertung schreiben</span><span class="button-subtitle">5.0 ★</span></span><svg class="button-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </a>
+
+          <div class="button-group-separator"></div>
+
+          <!-- Section: Collapsed Secondary / Agency Links -->
+          <details class="secondary-collapse" id="secondaryLinksDetails">
+            <summary class="secondary-summary" id="secondarySummary">
+              <span id="secondarySummaryLabel">Weitere Links &amp; Agentur</span>
+              <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="secondary-content">
+              <a
+                class="button button-default"
+                href="hub.html"
+                role="button"
+                aria-label="Leistungen & Agentur-Hub entdecken"
+              >
+                <img
+                  class="icon"
+                  aria-hidden="true"
+                  src="images/icons/hub.svg"
+                  alt=""
+                  width="19"
+                  height="19"
+                /><span class="button-label-group"><span class="button-title">Agentur-Hub</span></span><svg class="button-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+              <a
+                class="button button-obsidian"
+                href="https://omnivault.masrisystems.com/"
+                target="_blank"
+                rel="noopener"
+                role="button"
+                aria-label="Omnivault AI Obsidian-Vorlage entdecken"
+              >
+                <img
+                  class="icon"
+                  aria-hidden="true"
+                  src="images/icons/obsidian.svg"
+                  alt=""
+                  width="19"
+                  height="19"
+                /><span class="button-label-group"><span class="button-title">Omnivault AI</span></span><svg class="button-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+              <a
+                class="button button-github"
+                href="https://github.com/sponsors/Masrisystems"
+                target="_blank"
+                rel="noopener"
+                role="button"
+                aria-label="Masri Systems auf GitHub unterstützen"
+              >
+                <img
+                  class="icon"
+                  aria-hidden="true"
+                  src="images/icons/heart-sponsor.svg"
+                  alt=""
+                  width="19"
+                  height="19"
+                /><span class="button-label-group"><span class="button-title">GitHub Sponsors</span></span><svg class="button-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+              <a
+                class="button button-facebook"
+                href="https://www.facebook.com/profile.php?id=61582289406696"
+                target="_blank"
+                rel="noopener"
+                role="button"
+                aria-label="Masri Systems auf Facebook"
+              >
+                <img
+                  class="icon"
+                  aria-hidden="true"
+                  src="images/icons/facebook.svg"
+                  alt=""
+                  width="19"
+                  height="19"
+                /><span class="button-label-group"><span class="button-title">Facebook</span></span><svg class="button-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </details>
         </nav>
 
         <section class="trust-section" aria-label="Experience highlights">
@@ -517,6 +582,15 @@
             >
           </p>
         </footer>
+
+        <div class="print-qr-block" aria-hidden="true">
+          <div class="print-qr-info">
+            <div class="print-qr-title">Masri Systems · Links &amp; Hub</div>
+            <div class="print-qr-desc">Scannen oder online aufrufen für interaktive Links, Terminbuchung &amp; Projekte.</div>
+            <div class="print-qr-url">https://links.masrisystems.com</div>
+          </div>
+          <img src="images/qr-code.png" alt="Masri Systems Links QR Code" width="60" height="60" />
+        </div>
       </div>
     </main>
 
@@ -581,6 +655,12 @@
             </svg>
             <span id="qrCopyLinkText">Link kopieren</span>
           </button>
+          <button type="button" class="button-action button-qr-expand" data-action="save-vcard" id="qrSaveVcardBtn" aria-label="Visitenkarte / Kontakt als .vcf speichern">
+            <svg class="action-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline>
+            </svg>
+            <span id="qrSaveContactText">Visitenkarte (.vcf) speichern</span>
+          </button>
         </div>
       </div>
     </div>
@@ -618,9 +698,17 @@
           linkCopied: "Link in die Zwischenablage kopiert!",
           shareTitle: "Masri Systems — Links",
           shareText: "Masri Systems — Oldenburg & Remote · Softwareentwicklung, AI & Webdesign:\n",
-          heroCtaTitle: "Erstgespräch buchen",
+          subtitle: "Oldenburg & Remote · Softwareentwicklung, AI & Webdesign",
+          vcard: "Kontakt",
+          vcardAria: "Visitenkarte als Kontakt speichern (.vcf)",
+          vcardDownload: "Visitenkarte (.vcf) speichern",
+          vcardDownloaded: "Visitenkarte heruntergeladen!",
+          heroCtaTitle: "Erstgespräch vereinbaren",
           heroCtaBadge: "Kostenlos · 30 Min.",
-          heroCtaAria: "Kostenloses 30-Minuten-Gespräch via Cal.com buchen"
+          heroCtaAria: "Kostenloses 30-Minuten-Gespräch via Cal.com buchen",
+          moreLinks: "Weitere Links & Agentur",
+          saveContact: "Kontakt speichern",
+          saveContactAria: "Mohamad Masri als Kontakt im Smartphone speichern (.vcf)"
         },
         en: {
           langCode: "en",
@@ -649,10 +737,18 @@
           qrCopyLink: "Copy Link",
           linkCopied: "Link copied to clipboard!",
           shareTitle: "Masri Systems — Links",
-          shareText: "Connect with Masri Systems — Oldenburg & Remote · Softwareentwicklung, AI & Webdesign:\n",
+          shareText: "Connect with Masri Systems — Oldenburg & Remote · Software Development, AI & Web Design:\n",
+          subtitle: "Oldenburg & Remote · Software Development, AI & Web Design",
+          vcard: "Contact",
+          vcardAria: "Save business card to contacts (.vcf)",
+          vcardDownload: "Save Contact (.vcf)",
+          vcardDownloaded: "Contact card downloaded!",
           heroCtaTitle: "Book a Free Call",
           heroCtaBadge: "Free · 30 Min",
-          heroCtaAria: "Book a free 30-minute call via Cal.com"
+          heroCtaAria: "Book a free 30-minute call via Cal.com",
+          moreLinks: "More Links & Agency",
+          saveContact: "Save Contact",
+          saveContactAria: "Save Mohamad Masri to smartphone contacts (.vcf)"
         }
       }
 
@@ -676,6 +772,27 @@
       function updateStaticTexts() {
         const t = I18N[currentLang] || I18N.de
         document.documentElement.lang = currentLang
+
+        const subtitleEl = document.getElementById("profileSubtitle") || document.querySelector(".profile .subtitle")
+        if (subtitleEl) subtitleEl.textContent = t.subtitle
+
+        const topBarSaveContactText = document.getElementById("topBarSaveContactText")
+        if (topBarSaveContactText) topBarSaveContactText.textContent = t.vcard
+
+        const saveVcardBtn = document.getElementById("saveVcardBtn")
+        if (saveVcardBtn) saveVcardBtn.setAttribute("aria-label", t.vcardAria)
+
+        const headerSaveContactText = document.getElementById("headerSaveContactText")
+        if (headerSaveContactText) headerSaveContactText.textContent = t.saveContact
+
+        const headerSaveContactBtn = document.getElementById("headerSaveContactBtn")
+        if (headerSaveContactBtn) headerSaveContactBtn.setAttribute("aria-label", t.saveContactAria)
+
+        const qrSaveVcardBtn = document.getElementById("qrSaveVcardBtn")
+        if (qrSaveVcardBtn) qrSaveVcardBtn.setAttribute("aria-label", t.vcardAria)
+
+        const qrSaveContactText = document.getElementById("qrSaveContactText")
+        if (qrSaveContactText) qrSaveContactText.textContent = t.vcardDownload
 
         const stickyText = document.getElementById("stickyCtaText")
         if (stickyText) stickyText.textContent = t.stickyText
@@ -709,6 +826,9 @@
 
         const heroCtaBtn = document.getElementById("heroCtaBtn")
         if (heroCtaBtn) heroCtaBtn.setAttribute("aria-label", t.heroCtaAria)
+
+        const secondarySummaryLabel = document.getElementById("secondarySummaryLabel")
+        if (secondarySummaryLabel) secondarySummaryLabel.textContent = t.moreLinks
       }
 
       function toggleLanguage() {
@@ -787,8 +907,9 @@
               buttonsHtml += `<div class="button-group-separator"></div>`
             }
             const sectionLabel = section["label_" + currentLang] || section.label
-            buttonsHtml += `<span class="section-label" aria-hidden="true">${sectionLabel}</span>`
+            const isCollapsed = Boolean(section.collapsed)
 
+            let sectionButtonsHtml = ""
             if (section.buttons && Array.isArray(section.buttons)) {
               section.buttons.forEach((btn) => {
                 if (btn.active !== false) {
@@ -796,14 +917,41 @@
                   const targetAttr = isExternal ? 'target="_blank" rel="noopener"' : ""
                   const btnName = btn["name_" + currentLang] || btn.name
                   const btnAria = btn["aria_label_" + currentLang] || btn.aria_label || btnName
-                  buttonsHtml += `
+                  const parenMatch = btnName.match(/^(.*?)\s*\(([^)]+)\)$/)
+                  const titleText = btn["title_" + currentLang] || btn.title || (parenMatch ? parenMatch[1] : btnName)
+                  const subText = btn["subtitle_" + currentLang] || btn.subtitle || (parenMatch ? parenMatch[2] : "")
+
+                  const textContentHtml = subText 
+                    ? `<span class="button-label-group"><span class="button-title">${titleText}</span><span class="button-subtitle">${subText}</span></span>`
+                    : `<span class="button-label-group"><span class="button-title">${btnName}</span></span>`
+
+                  sectionButtonsHtml += `
                     <a class="button ${btn.class}" href="${btn.link}" ${targetAttr} role="button" style="animation-delay: ${delay.toFixed(2)}s" aria-label="${btnAria}">
-                      <img class="icon" aria-hidden="true" src="${btn.logo}" alt="" width="19" height="19">${btnName}
+                      <img class="icon" aria-hidden="true" src="${btn.logo}" alt="" width="19" height="19">${textContentHtml}<svg class="button-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
                     </a>
                   `
                   delay += 0.05
                 }
               })
+            }
+
+            if (isCollapsed) {
+              buttonsHtml += `
+                <details class="secondary-collapse" id="secondaryLinksDetails">
+                  <summary class="secondary-summary" id="secondarySummary">
+                    <span id="secondarySummaryLabel">${sectionLabel}</span>
+                    <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </summary>
+                  <div class="secondary-content">
+                    ${sectionButtonsHtml}
+                  </div>
+                </details>
+              `
+            } else {
+              buttonsHtml += `<span class="section-label" aria-hidden="true">${sectionLabel}</span>`
+              buttonsHtml += sectionButtonsHtml
             }
           })
         }
@@ -824,7 +972,7 @@
 
         const companyName = profile.company?.name || "Masri Systems"
         const logoUrl = profile.company?.logo_url || "images/masrisystems-logo-light.webp"
-        const subtitle = profile.company?.subtitle || "Oldenburg & Remote · Softwareentwicklung, AI & Webdesign"
+        const subtitle = (profile.company && (profile.company["subtitle_" + currentLang] || profile.company[`subtitle_${currentLang}`])) || t.subtitle || profile.company?.subtitle || "Oldenburg & Remote · Softwareentwicklung, AI & Webdesign"
         const contactEmail = profile.contact?.email || "hallo@masrisystems.com"
 
         document.getElementById("card").innerHTML = `
@@ -842,6 +990,10 @@
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
                 <span id="topBarQrText">${t.qrCode}</span>
               </button>
+              <button type="button" class="top-bar-btn" data-action="save-vcard" id="saveVcardBtn" aria-label="${t.vcardAria}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                <span id="topBarSaveContactText">${t.vcard}</span>
+              </button>
             </div>
 
             <header class="profile">
@@ -855,11 +1007,43 @@
                     <polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon>
                   </svg>
                 </h1>
-                <p class="subtitle">${subtitle}</p>
+                <p class="subtitle" id="profileSubtitle">${subtitle}</p>
                 <div class="contact-info">
                     <a href="tel:${profile.contact.phone_link}" aria-label="Call ${companyName}">${profile.contact.phone_display}</a>
                 </div>
                 ${quickSocialsHtml}
+                <!-- Prominent Save Contact (vCard) Action Button -->
+                <div class="header-vcard-wrapper">
+                  <a
+                    href="masrisystems.vcf"
+                    download="Masri_Systems_Mohamad_Masri.vcf"
+                    class="header-vcard-btn"
+                    id="headerSaveContactBtn"
+                    data-action="save-vcard"
+                    role="button"
+                    aria-label="${t.saveContactAria}"
+                  >
+                    <svg
+                      class="header-vcard-icon"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <line x1="19" y1="8" x2="19" y2="14"></line>
+                      <line x1="22" y1="11" x2="16" y2="11"></line>
+                    </svg>
+                    <span class="header-vcard-text" id="headerSaveContactText">${t.saveContact}</span>
+                    <span class="header-vcard-badge">.vcf</span>
+                  </a>
+                </div>
                 <div class="availability-badge" aria-label="${t.available}">
                     <span class="pulse-dot" aria-hidden="true"></span>
                     ${t.available}
@@ -876,17 +1060,17 @@
                 <h2 class="trust-title">${t.whyWork}</h2>
                 <div class="trust-stats">
                     <a href="https://resume.masrisystems.com/" target="_blank" rel="noopener" class="trust-stat" aria-label="5+ ${t.yearsExp} — View Resume">
-                        <span class="stat-value"><span class="counter" data-target="5">0</span>+</span>
+                        <span class="stat-value"><span class="counter" data-target="5">5</span>+</span>
                         <span class="stat-label">${t.yearsExp}</span>
                     </a>
                     <a href="https://masrisystems.com/brain/projects/" target="_blank" rel="noopener" class="trust-stat" aria-label="40+ ${t.projects} — View Projects">
-                        <span class="stat-value"><span class="counter" data-target="40">0</span>+</span>
+                        <span class="stat-value"><span class="counter" data-target="40">40</span>+</span>
                         <span class="stat-label">${t.projects}</span>
                     </a>
                     <a href="https://g.page/r/CQl3_s6R1DkiEAE/review" target="_blank" rel="noopener" class="trust-stat" aria-label="Google Rating 5.0 — Leave a Review on Google Maps">
                         <span class="stat-value">
                           <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                          <span class="counter" data-target="5.0" data-decimals="1">0.0</span>
+                          <span class="counter" data-target="5.0" data-decimals="1">5.0</span>
                         </span>
                         <span class="stat-label">${t.googleRating}</span>
                     </a>
@@ -904,6 +1088,15 @@
                     © ${new Date().getFullYear()} ${companyName} · ${t.buildingSince} · <a href="https://masrisystems.com/privacy-policy" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">${t.privacyPolicy}</a>
                 </p>
             </footer>
+
+            <div class="print-qr-block" aria-hidden="true">
+              <div class="print-qr-info">
+                <div class="print-qr-title">${companyName} · Links &amp; Hub</div>
+                <div class="print-qr-desc">Scannen oder online aufrufen für interaktive Links, Terminbuchung &amp; Projekte.</div>
+                <div class="print-qr-url">https://links.masrisystems.com</div>
+              </div>
+              <img src="images/qr-code.png" alt="Masri Systems Links QR Code" width="60" height="60" />
+            </div>
         `
 
         initCounters()
@@ -947,6 +1140,8 @@
             company: {
               name: "Masri Systems",
               subtitle: "Oldenburg & Remote · Softwareentwicklung, AI & Webdesign",
+              subtitle_de: "Oldenburg & Remote · Softwareentwicklung, AI & Webdesign",
+              subtitle_en: "Oldenburg & Remote · Software Development, AI & Web Design",
               logo_url: "images/masrisystems-logo-light.webp",
               background_url: "https://masri.uber.space/images/email/bg2.png",
             },
@@ -980,13 +1175,6 @@
                 aria_label: "Instagram Profile",
               },
               {
-                name: "Facebook",
-                link: "https://www.facebook.com/profile.php?id=61582289406696",
-                class: "quick-facebook",
-                logo: "images/icons/facebook.svg",
-                aria_label: "Facebook Page",
-              },
-              {
                 name: "WhatsApp",
                 link: "https://wa.me/4917631579669",
                 class: "quick-whatsapp",
@@ -1011,6 +1199,61 @@
             },
             sections: [
               {
+                label: "Entdecken",
+                label_de: "Entdecken",
+                label_en: "Explore",
+                buttons: [
+                  {
+                    name: "Lebenslauf",
+                    name_de: "Lebenslauf",
+                    name_en: "Resume",
+                    link: "https://resume.masrisystems.com/",
+                    class: "button-resume",
+                    logo: "images/icons/resume.svg",
+                    aria_label: "Visit my resume at resume.masrisystems.com",
+                    aria_label_de: "Lebenslauf auf resume.masrisystems.com ansehen",
+                    aria_label_en: "Visit my resume at resume.masrisystems.com",
+                    active: true,
+                  },
+                  {
+                    name: "Projekte",
+                    name_de: "Projekte",
+                    name_en: "Projects",
+                    link: "https://masrisystems.com/brain/projects/",
+                    class: "button-default",
+                    logo: "images/icons/projects.svg",
+                    aria_label: "Explore digital flagships and client projects",
+                    aria_label_de: "Digitale Flaggschiffe & Kundenprojekte ansehen",
+                    aria_label_en: "Explore digital flagships and client projects",
+                    active: true,
+                  },
+                  {
+                    name: "Webseite",
+                    name_de: "Webseite",
+                    name_en: "Website",
+                    link: "https://masrisystems.com/",
+                    class: "button-default",
+                    logo: "images/icons/globe.svg",
+                    aria_label: "Visit my website masrisystems.com",
+                    aria_label_de: "Offizielle Webseite masrisystems.com besuchen",
+                    aria_label_en: "Visit my website masrisystems.com",
+                    active: true,
+                  },
+                  {
+                    name: "Blog",
+                    name_de: "Blog",
+                    name_en: "Blog",
+                    link: "https://masrisystems.com/blog",
+                    class: "button-default",
+                    logo: "images/icons/blog.svg",
+                    aria_label: "Read my blog at masrisystems.com/blog",
+                    aria_label_de: "Blog auf masrisystems.com/blog lesen",
+                    aria_label_en: "Read my blog at masrisystems.com/blog",
+                    active: true,
+                  },
+                ],
+              },
+              {
                 label: "Zusammenarbeit",
                 label_de: "Zusammenarbeit",
                 label_en: "Work with me",
@@ -1028,18 +1271,6 @@
                     active: true,
                   },
                   {
-                    name: "GitHub Sponsors",
-                    name_de: "GitHub Sponsors",
-                    name_en: "GitHub Sponsors",
-                    link: "https://github.com/sponsors/Masrisystems",
-                    class: "button-github",
-                    logo: "images/icons/heart-sponsor.svg",
-                    aria_label: "Sponsor me on GitHub",
-                    aria_label_de: "Masri Systems auf GitHub unterstützen",
-                    aria_label_en: "Sponsor me on GitHub",
-                    active: true,
-                  },
-                  {
                     name: "Kleinanzeigen Pro",
                     name_de: "Kleinanzeigen Pro",
                     name_en: "Kleinanzeigen Pro",
@@ -1054,48 +1285,40 @@
                 ],
               },
               {
-                label: "Entdecken",
-                label_de: "Entdecken",
-                label_en: "Explore",
+                label: "Bewertungen",
+                label_de: "Bewertungen",
+                label_en: "Reviews & Ratings",
                 buttons: [
                   {
-                    name: "Webseite",
-                    name_de: "Webseite",
-                    name_en: "Website",
-                    link: "https://masrisystems.com/",
-                    class: "button-default",
-                    logo: "images/icons/globe.svg",
-                    aria_label: "Visit my website masrisystems.com",
+                    name: "Google-Bewertung schreiben (5.0 ★)",
+                    name_de: "Google-Bewertung schreiben (5.0 ★)",
+                    name_en: "Leave a Google Review (5.0 ★)",
+                    link: "https://g.page/r/CQl3_s6R1DkiEAE/review",
+                    class: "button-google",
+                    logo: "images/icons/google.svg",
+                    aria_label: "Leave a Google review",
+                    aria_label_de: "Google-Bewertung abgeben",
+                    aria_label_en: "Leave a Google review",
                     active: true,
                   },
+                ],
+              },
+              {
+                label: "Weitere Links & Agentur",
+                label_de: "Weitere Links & Agentur",
+                label_en: "More Links & Agency",
+                collapsed: true,
+                buttons: [
                   {
-                    name: "Agency Hub",
-                    name_de: "Agency Hub",
+                    name: "Agentur-Hub",
+                    name_de: "Agentur-Hub",
                     name_en: "Agency Hub",
                     link: "hub.html",
                     class: "button-default",
                     logo: "images/icons/hub.svg",
                     aria_label: "Explore Services & Agency Hub",
-                    active: true,
-                  },
-                  {
-                    name: "Projekte",
-                    name_de: "Projekte",
-                    name_en: "Projects",
-                    link: "https://masrisystems.com/brain/projects/",
-                    class: "button-default",
-                    logo: "images/icons/projects.svg",
-                    aria_label: "Explore digital flagships and client projects",
-                    active: true,
-                  },
-                  {
-                    name: "Blog",
-                    name_de: "Blog",
-                    name_en: "Blog",
-                    link: "https://masrisystems.com/blog",
-                    class: "button-default",
-                    logo: "images/icons/blog.svg",
-                    aria_label: "Read my blog at masrisystems.com/blog",
+                    aria_label_de: "Leistungen & Agentur-Hub entdecken",
+                    aria_label_en: "Explore Services & Agency Hub",
                     active: true,
                   },
                   {
@@ -1106,33 +1329,32 @@
                     class: "button-obsidian",
                     logo: "images/icons/obsidian.svg",
                     aria_label: "Explore Omnivault AI Obsidian Template",
+                    aria_label_de: "Omnivault AI Obsidian-Vorlage entdecken",
+                    aria_label_en: "Explore Omnivault AI Obsidian Template",
                     active: true,
                   },
                   {
-                    name: "Lebenslauf / CV",
-                    name_de: "Lebenslauf / CV",
-                    name_en: "Resume",
-                    link: "https://resume.masrisystems.com/",
-                    class: "button-resume",
-                    logo: "images/icons/resume.svg",
-                    aria_label: "Visit my resume at resume.masrisystems.com",
+                    name: "GitHub Sponsors",
+                    name_de: "GitHub Sponsors",
+                    name_en: "GitHub Sponsors",
+                    link: "https://github.com/sponsors/Masrisystems",
+                    class: "button-github",
+                    logo: "images/icons/heart-sponsor.svg",
+                    aria_label: "Sponsor me on GitHub",
+                    aria_label_de: "Masri Systems auf GitHub unterstützen",
+                    aria_label_en: "Sponsor me on GitHub",
                     active: true,
                   },
-                ],
-              },
-              {
-                label: "Bewertungen",
-                label_de: "Bewertungen",
-                label_en: "Reviews & Ratings",
-                buttons: [
                   {
-                    name: "Google-Bewertung abgeben (5.0 ★)",
-                    name_de: "Google-Bewertung abgeben (5.0 ★)",
-                    name_en: "Leave a Google Review (5.0 ★)",
-                    link: "https://g.page/r/CQl3_s6R1DkiEAE/review",
-                    class: "button-google",
-                    logo: "images/icons/google.svg",
-                    aria_label: "Leave a Google review",
+                    name: "Facebook",
+                    name_de: "Facebook",
+                    name_en: "Facebook",
+                    link: "https://www.facebook.com/profile.php?id=61582289406696",
+                    class: "button-facebook",
+                    logo: "images/icons/facebook.svg",
+                    aria_label: "Masri Systems on Facebook",
+                    aria_label_de: "Masri Systems auf Facebook",
+                    aria_label_en: "Masri Systems on Facebook",
                     active: true,
                   },
                 ],
@@ -1227,6 +1449,54 @@
           showToast(t.linkCopied)
         } catch (err) {
           window.prompt("Copy this link:", url)
+        }
+      }
+
+      // Save / Download vCard 3.0 file (works 100% offline via client-side Blob or direct file download)
+      function downloadVcard() {
+        const t = I18N[currentLang] || I18N.de
+        const vcardContent = `BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Masri Systems//EN
+N:Masri;Mohamad;;;
+FN:Mohamad Masri
+ORG:Masri Systems
+TITLE:Founder & Lead Systems Engineer · Softwareentwicklung, AI & Webdesign
+EMAIL;type=INTERNET;type=WORK;type=pref:hallo@masrisystems.com
+TEL;type=WORK;type=CELL;type=VOICE;type=pref:+4917631579669
+ADR;type=WORK;type=pref:;;Nettelbeckstraße;Oldenburg;Niedersachsen;26131;Deutschland
+GEO:53.140118;8.188813
+URL;type=WORK;type=pref:https://masrisystems.com/
+URL;type=Links:https://links.masrisystems.com/
+URL;type=Calendar:https://cal.com/masrisystems-f7j951/30min?duration=30
+URL;type=GitHub:https://github.com/masrisystems
+URL;type=LinkedIn:https://www.linkedin.com/company/masri-systems
+URL;type=Kleinanzeigen:https://www.kleinanzeigen.de/pro/masrisystems
+URL;type=Instagram:https://www.instagram.com/masrisystems/
+NOTE:Masri Systems — Oldenburg & Remote. Softwareentwicklung, AI & Webdesign. Termine: https://cal.com/masrisystems-f7j951/30min | Tel: +49 176 31579669 | Mail: hallo@masrisystems.com
+END:VCARD`
+
+        // On mobile iOS Safari, navigating directly to the .vcf file natively triggers the Contacts sheet
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+        if (isIOS) {
+          window.location.href = "masrisystems.vcf"
+          showToast(t.vcardDownloaded || "Visitenkarte heruntergeladen!")
+          return
+        }
+
+        try {
+          const blob = new Blob([vcardContent], { type: "text/vcard;charset=utf-8" })
+          const url = URL.createObjectURL(blob)
+          const a = document.createElement("a")
+          a.href = url
+          a.download = "Masri_Systems_Mohamad_Masri.vcf"
+          document.body.appendChild(a)
+          a.click()
+          document.body.removeChild(a)
+          setTimeout(() => URL.revokeObjectURL(url), 1000)
+          showToast(t.vcardDownloaded || "Visitenkarte heruntergeladen!")
+        } catch (err) {
+          window.location.href = "masrisystems.vcf"
         }
       }
 
@@ -1367,6 +1637,13 @@
         if (copyLinkBtn) {
           e.preventDefault()
           copyLinkToClipboard()
+          return
+        }
+
+        const saveVcardBtn = e.target.closest('[data-action="save-vcard"]')
+        if (saveVcardBtn) {
+          e.preventDefault()
+          downloadVcard()
           return
         }
       })
