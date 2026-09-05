@@ -68,13 +68,20 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css?v=18" />
+    <link rel="stylesheet" href="css/style.css?v=19" />
     <link rel="stylesheet" href="css/brands.css?v=5" />
 
-    <!-- FOUC Prevention -->
+    <!-- FOUC Prevention & Seamless Single-Piece Background -->
     <style>
       html {
         background-color: #181715;
+      }
+      body {
+        background-color: #181715;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
       }
     </style>
 
@@ -678,9 +685,13 @@
         const t = I18N[currentLang] || I18N.de
         updateStaticTexts()
 
-        // Set background image
+        // Set background image as seamless single piece
         if (profile.company && profile.company.background_url) {
           document.body.style.backgroundImage = `url('${profile.company.background_url}')`
+          document.body.style.backgroundRepeat = 'no-repeat'
+          document.body.style.backgroundPosition = 'center center'
+          document.body.style.backgroundSize = 'cover'
+          document.body.style.backgroundAttachment = 'fixed'
         }
 
         // Quick Socials
