@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <!-- Core Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- SEO -->
+    <title>Mohamad Masri — Verifizierte Zertifikate &amp; Qualifikationen | Masri Systems</title>
+    <meta
+      name="description"
+      content="Offizielle Zertifikate, Bildungsabschlüsse und Verifizierungsnachweise von Mohamad Masri: Postman API Testing (v12), Google Cloud GenAI, Cisco CCNA, ZAB Zeugnisbewertung &amp; Laravel."
+    />
+    <meta name="author" content="Mohamad Masri" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://links.masrisystems.com/certificates.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/masrisystems-logo-light.svg" />
+    <link rel="icon" type="image/png" sizes="128x128" href="images/avatar.png?v=4" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.bunny.net/css?family=inter:400,500,600,700"
+    />
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css?v=19" />
+
+    <style>
+      .cert-card-wrapper {
+        width: 100%;
+        max-width: 580px;
+        margin: 0 auto;
+      }
+      .back-nav {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--color-accent);
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.15s ease;
+      }
+      .back-nav:hover {
+        color: var(--color-accent-hover);
+        text-decoration: underline;
+      }
+      .cert-header {
+        margin-bottom: 2rem;
+        text-align: left;
+      }
+      .cert-header h1 {
+        font-size: 1.45rem;
+        font-weight: 700;
+        color: var(--color-text);
+        letter-spacing: -0.02em;
+        margin-bottom: 0.35rem;
+      }
+      .cert-header p {
+        font-size: 0.88rem;
+        color: var(--color-text-muted);
+        line-height: 1.5;
+      }
+      .cert-category {
+        margin-bottom: 2rem;
+        text-align: left;
+      }
+      .cert-category-title {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--color-accent);
+        margin-bottom: 0.85rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .cert-item {
+        background: rgba(37, 35, 32, 0.7);
+        border: 1px solid var(--glass-border);
+        border-radius: var(--radius-md);
+        padding: 1.1rem;
+        margin-bottom: 0.85rem;
+        transition: transform 0.15s ease, border-color 0.15s ease;
+      }
+      .cert-item:hover {
+        transform: translateY(-2px);
+        border-color: rgba(204, 120, 92, 0.4);
+      }
+      .cert-title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 0.35rem;
+      }
+      .cert-title {
+        font-size: 0.98rem;
+        font-weight: 600;
+        color: var(--color-text);
+        line-height: 1.35;
+      }
+      .cert-badge-date {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--color-text-muted);
+        background: rgba(230, 223, 216, 0.08);
+        padding: 0.2rem 0.5rem;
+        border-radius: var(--radius-sm);
+        white-space: nowrap;
+      }
+      .cert-issuer {
+        font-size: 0.82rem;
+        color: var(--color-accent);
+        margin-bottom: 0.5rem;
+      }
+      .cert-description {
+        font-size: 0.82rem;
+        color: var(--color-text-muted);
+        line-height: 1.45;
+        margin-bottom: 0.65rem;
+      }
+      .cert-verify-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--color-accent);
+        text-decoration: none;
+        border: 1px solid rgba(204, 120, 92, 0.3);
+        padding: 0.3rem 0.65rem;
+        border-radius: var(--radius-sm);
+        background: rgba(204, 120, 92, 0.06);
+        transition: all 0.15s ease;
+      }
+      .cert-verify-link:hover {
+        background: rgba(204, 120, 92, 0.15);
+        border-color: var(--color-accent);
+      }
+      .cert-verify-link svg {
+        flex-shrink: 0;
+      }
+      .degree-highlight {
+        border-left: 3px solid var(--color-accent);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="page">
+      <div class="card cert-card-wrapper">
+        <a href="index.html" class="back-nav" aria-label="Zurück zur Übersicht">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Zurück zu Links &amp; Hub
+        </a>
+
+        <div class="cert-header">
+          <h1>Verifizierte Zertifikate &amp; Nachweise</h1>
+          <p>
+            Offizielle Bildungsnachweise, Branchenzertifizierungen und kontinuierliche Weiterbildung von <strong>Mohamad Masri</strong>.
+          </p>
+        </div>
+
+        <!-- Section: Akademischer Abschluss & Gleichwertigkeit -->
+        <section class="cert-category" aria-label="Akademische Qualifikation">
+          <div class="cert-category-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+            Akademischer Abschluss &amp; Äquivalenz
+          </div>
+
+          <div class="cert-item degree-highlight">
+            <div class="cert-title-row">
+              <span class="cert-title">Bachelor of Science (B.Sc.) in Informatik (Computer Science)</span>
+              <span class="cert-badge-date">Note 1,8 · GPA 3.44</span>
+            </div>
+            <div class="cert-issuer">KMK / ZAB Zeugnisbewertung (Bonn, Reg.-Nr. LN2024/8883-1)</div>
+            <div class="cert-description">
+              Offizielle Gleichwertigkeitsfeststellung der Zentralstelle für ausländisches Bildungswesen (ZAB): Entspricht der deutschen Bachelor-Ebene (Informatik / 180 ECTS). Ausgezeichnet auf der Dean’s Honor List für herausragende akademische Spitzenleistungen.
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Postman API Testing & Architecture -->
+        <section class="cert-category" aria-label="Postman API Zertifizierungen">
+          <div class="cert-category-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 14 14"/>
+            </svg>
+            API Engineering &amp; Postman Academy
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-title-row">
+              <span class="cert-title">Postman API Testing Path (v12)</span>
+              <span class="cert-badge-date">09/2026</span>
+            </div>
+            <div class="cert-issuer">Postman Academy · Skilljar ID: gtmjbzpudn8f</div>
+            <div class="cert-description">
+              Automatisierte Test-Assertions, Newman CLI, CI/CD Pipeline Integration, Regressionstests und performante API-Testsuiten.
+            </div>
+            <a href="https://verify.skilljar.com/c/gtmjbzpudn8f" target="_blank" rel="noopener" class="cert-verify-link">
+              <span>Zertifikat online verifizieren</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-title-row">
+              <span class="cert-title">Postman API Prototyping Path</span>
+              <span class="cert-badge-date">09/2026</span>
+            </div>
+            <div class="cert-issuer">Postman Academy · Skilljar ID: efhmtc9bmxbn</div>
+            <div class="cert-description">
+              API-First Architektur, interaktive Mock Server, API-Dokumentation und Spezifikationsdesign.
+            </div>
+            <a href="https://verify.skilljar.com/c/efhmtc9bmxbn" target="_blank" rel="noopener" class="cert-verify-link">
+              <span>Zertifikat online verifizieren</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-title-row">
+              <span class="cert-title">Postman API Beginner</span>
+              <span class="cert-badge-date">09/2026</span>
+            </div>
+            <div class="cert-issuer">Postman · Credly ID: 6ce31230-2c31-4487-8ffe-a9e85a580ed3</div>
+            <div class="cert-description">
+              REST APIs, Request/Response Workflows, dynamische Umgebungsvariablen und Authentifizierung.
+            </div>
+            <a href="https://www.credly.com/badges/6ce31230-2c31-4487-8ffe-a9e85a580ed3/public_url" target="_blank" rel="noopener" class="cert-verify-link">
+              <span>Credly Badge ansehen</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </section>
+
+        <!-- Section: KI & Cloud & Netzwerke -->
+        <section class="cert-category" aria-label="KI & Cloud">
+          <div class="cert-category-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+            </svg>
+            Künstliche Intelligenz, Cloud &amp; Netzwerke
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-title-row">
+              <span class="cert-title">Generative AI &amp; LLM Fundamentals</span>
+              <span class="cert-badge-date">09/2026</span>
+            </div>
+            <div class="cert-issuer">Google Cloud Skills Boost</div>
+            <div class="cert-description">
+              Introduction to Generative AI, Large Language Models (LLMs), Prompt Engineering und Responsible AI Frameworks.
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-title-row">
+              <span class="cert-title">CCNA: Introduction to Networks</span>
+              <span class="cert-badge-date">03/2022</span>
+            </div>
+            <div class="cert-issuer">Cisco Networking Academy</div>
+            <div class="cert-description">
+              Netzwerkprotokolle (TCP/IP, UDP, DNS, DHCP), Subnetting, Routing, Switching und Netzwerksicherheit.
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Fachkurse & Frameworks -->
+        <section class="cert-category" aria-label="Web & Frameworks">
+          <div class="cert-category-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+            Fullstack Frameworks &amp; E-Commerce
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-title-row">
+              <span class="cert-title">Laravel: Build Multi Vendor E-Commerce Website</span>
+              <span class="cert-badge-date">06/2025</span>
+            </div>
+            <div class="cert-issuer">Udemy · ID: UC-8487eac1-5190-4518-ad23-375231396249</div>
+            <div class="cert-description">
+              Entwicklung einer mandantenfähigen E-Commerce Plattform, Zahlungs-Gateways, Bestellabwicklung und Admin-Dashboards.
+            </div>
+            <a href="https://www.udemy.com/certificate/UC-8487eac1-5190-4518-ad23-375231396249/" target="_blank" rel="noopener" class="cert-verify-link">
+              <span>Zertifikat ansehen</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-title-row">
+              <span class="cert-title">The Complete JavaScript Course: Zero to Expert</span>
+              <span class="cert-badge-date">08/2023</span>
+            </div>
+            <div class="cert-issuer">Udemy · ID: UC-eccd3b2e-ab3c-4712-b5bb-fa720e1e806b</div>
+            <div class="cert-description">
+              Moderne ES6+ Architektur, asynchrones JavaScript, Event Loop, Promises, OOP und State Management.
+            </div>
+            <a href="https://www.udemy.com/certificate/UC-eccd3b2e-ab3c-4712-b5bb-fa720e1e806b/" target="_blank" rel="noopener" class="cert-verify-link">
+              <span>Zertifikat ansehen</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-title-row">
+              <span class="cert-title">Modern React with Redux</span>
+              <span class="cert-badge-date">02/2023</span>
+            </div>
+            <div class="cert-issuer">Udemy · ID: UC-b020a745-a35e-474d-8b6a-8547bc687e86</div>
+            <div class="cert-description">
+              React Hooks, Redux Toolkit, Context API, REST API Anbindung und modulare Komponentenarchitektur.
+            </div>
+            <a href="https://www.udemy.com/certificate/UC-b020a745-a35e-474d-8b6a-8547bc687e86/" target="_blank" rel="noopener" class="cert-verify-link">
+              <span>Zertifikat ansehen</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </section>
+
+        <footer class="footer" role="contentinfo" style="margin-top: 1.5rem; border-top: 1px solid var(--glass-border); padding-top: 1rem;">
+          <p class="copyright">
+            © 2026 Mohamad Masri · Masri Systems · Oldenburg, Deutschland
+          </p>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
