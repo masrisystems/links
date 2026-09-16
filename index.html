@@ -1156,7 +1156,7 @@
       // Initialize
       async function init() {
         try {
-          const res = await fetch("./private.json")
+          const res = await fetch("./private.json", { cache: "no-cache" })
           if (!res.ok) throw new Error("Could not load private.json")
           const profile = await res.json()
           render(profile)
