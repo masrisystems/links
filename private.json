@@ -215,15 +215,15 @@
                     "active": true
                 },
                 {
-                    "name": "Verifizierte Zertifikate & Nachweise",
-                    "name_de": "Verifizierte Zertifikate & Nachweise",
-                    "name_en": "Verified Credentials & Certifications",
+                    "name": "Zertifikate",
+                    "name_de": "Zertifikate",
+                    "name_en": "Certificates",
                     "link": "certificates.html",
                     "class": "button-default",
                     "logo": "images/icons/certificate.svg",
-                    "aria_label": "Verified Credentials and Certifications",
-                    "aria_label_de": "Verifizierte Zertifikate und Nachweise ansehen",
-                    "aria_label_en": "View Verified Credentials and Certifications",
+                    "aria_label": "Certificates and Credentials",
+                    "aria_label_de": "Zertifikate und Nachweise ansehen",
+                    "aria_label_en": "View Certificates and Credentials",
                     "active": true
                 },
                 {
