@@ -255,12 +255,12 @@
           <div class="header-vcard-wrapper">
             <a
               href="masrisystems.vcf"
-              download="Masri_Systems_Mohamad_Masri.vcf"
+              download="Masri_Systems.vcf"
               class="header-vcard-btn"
               id="headerSaveContactBtn"
               data-action="save-vcard"
               role="button"
-              aria-label="Mohamad Masri als Kontakt im Smartphone speichern (.vcf)"
+              aria-label="Masri Systems als Kontakt im Smartphone speichern (.vcf)"
             >
               <svg
                 class="header-vcard-icon"
@@ -730,7 +730,7 @@
           heroCtaAria: "Kostenloses 30-Minuten-Gespräch via Cal.com buchen",
           moreLinks: "Weitere Links & Agentur",
           saveContact: "Kontakt speichern",
-          saveContactAria: "Mohamad Masri als Kontakt im Smartphone speichern (.vcf)"
+          saveContactAria: "Masri Systems als Kontakt im Smartphone speichern (.vcf)"
         },
         en: {
           langCode: "en",
@@ -770,7 +770,7 @@
           heroCtaAria: "Book a free 30-minute call via Cal.com",
           moreLinks: "More Links & Agency",
           saveContact: "Save Contact",
-          saveContactAria: "Save Mohamad Masri to smartphone contacts (.vcf)"
+          saveContactAria: "Save Masri Systems to smartphone contacts (.vcf)"
         }
       }
 
@@ -1042,7 +1042,7 @@
                 <div class="header-vcard-wrapper">
                   <a
                     href="masrisystems.vcf"
-                    download="Masri_Systems_Mohamad_Masri.vcf"
+                    download="Masri_Systems.vcf"
                     class="header-vcard-btn"
                     id="headerSaveContactBtn"
                     data-action="save-vcard"
@@ -1484,10 +1484,11 @@
         const vcardContent = `BEGIN:VCARD
 VERSION:3.0
 PRODID:-//Masri Systems//EN
-N:Masri;Mohamad;;;
-FN:Mohamad Masri
+N:Masri Systems;;;;
+FN:Masri Systems
 ORG:Masri Systems
-TITLE:Founder & Lead Systems Engineer · Softwareentwicklung, AI & Webdesign
+X-ABShowAs:COMPANY
+TITLE:Softwareentwicklung, AI & Webdesign
 EMAIL;type=INTERNET;type=WORK;type=pref:hallo@masrisystems.com
 TEL;type=WORK;type=CELL;type=VOICE;type=pref:+4917631579669
 ADR;type=WORK;type=pref:;;Nettelbeckstraße;Oldenburg;Niedersachsen;26131;Deutschland
@@ -1515,7 +1516,7 @@ END:VCARD`
           const url = URL.createObjectURL(blob)
           const a = document.createElement("a")
           a.href = url
-          a.download = "Masri_Systems_Mohamad_Masri.vcf"
+          a.download = "Masri_Systems.vcf"
           document.body.appendChild(a)
           a.click()
           document.body.removeChild(a)
