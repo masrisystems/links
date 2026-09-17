@@ -533,6 +533,20 @@ body {
   }
 }
 
+@media (max-width: 400px) {
+  .card-top-bar .top-bar-btn span:not(.lang-indicator) {
+    display: none;
+  }
+  .card-top-bar .top-bar-btn {
+    padding: 0.35rem 0.55rem;
+    flex: 0 0 auto;
+  }
+  .card-top-bar {
+    justify-content: flex-end;
+    gap: 0.4rem;
+  }
+}
+
 .qr-preview-container {
   flex-shrink: 0;
   position: relative;
