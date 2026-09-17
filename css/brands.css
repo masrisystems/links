@@ -696,3 +696,9 @@
 	--button-text:#ffffff;
 	--button-background:#14a800;
 }
+
+/* Xing */
+.button-xing {
+	--button-text:#ffffff;
+	--button-background:#006567;
+}

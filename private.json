@@ -37,6 +37,13 @@
             "aria_label": "LinkedIn Company Page"
         },
         {
+            "name": "XING",
+            "link": "https://www.xing.com/profile/Mohamad_Masri079683",
+            "class": "quick-xing",
+            "logo": "images/icons/xing.svg",
+            "aria_label": "XING Profile"
+        },
+        {
             "name": "Instagram",
             "link": "https://www.instagram.com/masrisystems/",
             "class": "quick-instagram",

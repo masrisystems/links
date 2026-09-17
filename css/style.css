@@ -234,6 +234,11 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.social-quick-link.quick-xing {
+  background: #006567;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 .social-quick-link.quick-whatsapp {
   background: #25D366;
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -482,18 +487,30 @@ body {
 }
 @media (max-width: 600px) {
   .card-top-bar {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .card-top-bar.card-top-bar-hub {
+    justify-content: space-between;
   }
   .top-bar-actions {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.35rem;
+    width: auto;
   }
   .top-bar-btn,
   .top-bar-back-btn {
-    width: 100%;
+    width: auto;
+    padding: 0.25rem 0.45rem;
+    font-size: 0.72rem;
+    gap: 0.25rem;
+    white-space: nowrap;
     justify-content: center;
   }
 }
