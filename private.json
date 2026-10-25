@@ -10,8 +10,8 @@
     "contact": {
         "street": "Nettelbeckstraße",
         "city": "26131 Oldenburg",
-        "phone_display": "+49 (176) 31579669",
-        "phone_link": "+4917631579669",
+        "phone_display": "+49 (1520) 4814190",
+        "phone_link": "+4915204814190",
         "email": "hallo@masrisystems.com",
         "vcard_button": {
             "name": "Kontakt speichern",
@@ -52,7 +52,7 @@
         },
         {
             "name": "WhatsApp",
-            "link": "https://wa.me/4917631579669",
+            "link": "https://wa.me/4915204814190",
             "class": "quick-whatsapp",
             "logo": "images/icons/whatsapp.svg",
             "aria_label": "WhatsApp Chat"
