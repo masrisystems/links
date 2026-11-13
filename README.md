@@ -6,7 +6,7 @@
 
 [![Live Site](https://img.shields.io/badge/Live-links.masrisystems.com-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://links.masrisystems.com)
 [![PageSpeed Score](https://img.shields.io/badge/PageSpeed-100%2F100-brightgreen?style=for-the-badge&logo=lighthouse&logoColor=white)](https://pagespeed.web.dev/analysis/https-links-masrisystems-com/17ex80ryq4?form_factor=mobile)
-[![License: MS-NC-1.0](https://img.shields.io/badge/License-Non--Commercial_(MS--NC--1.0)-red.svg?style=for-the-badge)](LICENSE.md)
+[![License: MS-NC-1.1](https://img.shields.io/badge/License-Non--Commercial_(MS--NC--1.1)-red.svg?style=for-the-badge)](LICENSE.md)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](docker/)
 
 [**🌐 Live Hub**](https://links.masrisystems.com) • [**🏢 Main Flagship**](https://masrisystems.com) • [**📄 Resume & Portfolio**](https://resume.masrisystems.com) • [**✍️ Technical Blog**](https://masrisystems.com/blog)
